@@ -557,6 +557,7 @@ a:active {
 
 .left-thumbnail {
 	margin-right: auto;
+	margin-left: 6px;
 }
 
 .right-thumbnail {
