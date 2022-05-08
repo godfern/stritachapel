@@ -396,7 +396,7 @@ body {
 /********************************************************/
 .section {
 	z-index: 1;
-	min-height: 420px;
+	min-height: 500px;
 	width: 100%;
 	overflow: auto;
 	height: 50%;
