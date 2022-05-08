@@ -399,8 +399,8 @@ body {
 	min-height: 420px;
 	width: 100%;
 	overflow: auto;
-	height: 100%;
-	/*padding-top:100px;*/
+	height: 50%;
+	position: relative;
 	padding-bottom: 50px;
 	display: none;
 	top: 0;
