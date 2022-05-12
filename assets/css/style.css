@@ -297,6 +297,7 @@ ul.radiate li h6 {
 		width: 100%;
 		align-items: center;
 		justify-content: center;
+		margin-right: 40px;
 	}
 
 	#nav>ul.main-menu-items-show {
@@ -385,7 +386,7 @@ ul.radiate li h6 {
 	}
 
 	#issues li p {
-		width: 100%;
+		width: 83%;
 		margin:0;
 	}
 

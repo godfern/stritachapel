@@ -1,19 +1,39 @@
-// let menuLink = document.querySelector(".main-menu-items a[name=menu-item]");
-// menuLink.addEventListener("click", (event) => {
-//     console.log("Button clicked.");
-//   });
-
 let mainmenu = document.querySelector(".mainmenu");
 let menuBlock = document.querySelector("ul.main-menu-items");
 let menuBtn = document.querySelector(".responsive-nav-btn");
+let docBtn = document.querySelector("#docs1");
+let docBtn2 = document.querySelector("#docs2");
+let docBlock = document.querySelector(".doc-block");
+let docBlock2 = document.querySelector(".doc-block2");
+let closeBtn = document.querySelector(".btn1");
+let closeBtn2 = document.querySelector(".btn2");
+
+
 let w = window.innerWidth;
 let h = window.innerHeight;
 
 menuBtn.addEventListener('click',event => {
     menuBlock.classList.toggle('main-menu-items-show');
     mainmenu.classList.toggle('main-menu-toggle');
-    // menuBlock.style.setProperty('height', 'calc(100vh - 50px)');
 })
+
+docBtn.addEventListener('click',event => {
+    docBlock.classList.toggle('doc-show')
+})
+
+docBtn2.addEventListener('click',event => {
+    docBlock2.classList.toggle('doc-show')
+})
+
+closeBtn.addEventListener('click',event => {
+    docBlock.classList.toggle('doc-show')
+})
+
+closeBtn2.addEventListener('click',event => {
+    docBlock2.classList.toggle('doc-show')
+})
+
+
 document.querySelectorAll(".main-menu-items a[name=menu-item]").forEach(item => {
     item.addEventListener('click', event => {
         // menuBlock.style.height = "0px";
