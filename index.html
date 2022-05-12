@@ -29,6 +29,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/sky.css">
 	<link rel="stylesheet" href="assets/css/style.css" media="screen" />
 	<link rel="stylesheet" href="assets/css/widgets.css" media="screen" />
+	<link rel="stylesheet" href="assets/css/gallery.css" media="screen" />
 
 	<!-- Fonts -->
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -951,6 +952,129 @@
 			<img src="assets/images/info/chapel-program.png" alt="chapel program" class="responsive">
 		</div>
 
+		<div class="doc-block3">
+			<div class="closeBtn btn3">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</div>
+			<!-- Container for the image gallery -->
+			<div class="image-container">
+
+				<!-- Full-width images with number text -->
+				<div class="mySlides">
+					<div class="numbertext">1 / 11</div>
+					<img src="assets/images/gallery/1.png" class="responsive">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">2 / 11</div>
+					<img src="assets/images/gallery/2.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 11</div>
+					<img src="assets/images/gallery/3.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 11</div>
+					<img src="assets/images/gallery/4.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 11</div>
+					<img src="assets/images/gallery/5.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">6 / 11</div>
+					<img src="assets/images/gallery/6.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">7 / 11</div>
+					<img src="assets/images/gallery/7.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">8 / 11</div>
+					<img src="assets/images/gallery/8.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">9 / 11</div>
+					<img src="assets/images/gallery/9.png" class="responsive">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">10 / 11</div>
+					<img src="assets/images/gallery/10.png" class="responsive">
+				</div>
+				<div class="mySlides">
+					<div class="numbertext">11 / 11</div>
+					<img src="assets/images/gallery/11.png" class="responsive">
+				</div>
+
+				<!-- Next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Image text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail images -->
+				<div class="row">
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/1.png" style="width:100%"
+							onclick="currentSlide(1)" alt="Blessing of St.Rita's Flag(Madi)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/2.png" style="width:100%"
+							onclick="currentSlide(2)" alt="Chapel's inner view with the chandelier(Old picture)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/3.png" style="width:100%"
+							onclick="currentSlide(3)" alt="Chapel's garden front view(Old picture)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/4.png" style="width:100%"
+							onclick="currentSlide(4)" alt="Chapel's garden view(Old picture)">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/5.png" style="width:100%"
+							onclick="currentSlide(5)" alt="Chapel's new garden view">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/6.png" style="width:100%"
+							onclick="currentSlide(6)" alt="Holy family in the new garden">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/7.png" style="width:100%"
+							onclick="currentSlide(7)" alt="Swing in the Chapel garden">
+					</div>
+
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/8.png" style="width:100%"
+							onclick="currentSlide(8)" alt="Our Lady grotto">
+					</div>
+
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/9.png" style="width:100%"
+							onclick="currentSlide(9)" alt="Chapel garden">
+					</div>
+
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/10.png" style="width:100%"
+							onclick="currentSlide(10)" alt="White house">
+					</div>
+					<div class="column">
+						<img class="demo cursor" src="assets/images/gallery/11.png" style="width:100%"
+							onclick="currentSlide(1)" alt="White house">
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Floating Button-->
 		<div class="mainopShadow"></div>
 		<div class="fab">
@@ -962,6 +1086,9 @@
 			</div>
 			<div id="docs2" class="minifab op1">
 				Weekly Chapel Program
+			</div>
+			<div id="docs3" class="minifab op3">
+				Gallery
 			</div>
 		</div>
 	</div>
@@ -976,6 +1103,7 @@
 	<script src="assets/js/jquery.circular.radiate.js"></script>
 	<script src="assets/js/responsiveslides.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/gallery.js"></script>
 	<script>
 		$(function () {
 			$().timelinr({
