@@ -2,13 +2,13 @@ let mainmenu = document.querySelector(".mainmenu");
 let menuBlock = document.querySelector("ul.main-menu-items");
 let menuBtn = document.querySelector(".responsive-nav-btn");
 let docBtn = document.querySelector("#docs1");
-let docBtn2 = document.querySelector("#docs2");
+// let docBtn2 = document.querySelector("#docs2");
 let docBtn3 = document.querySelector("#docs3");
 let docBlock = document.querySelector(".doc-block");
-let docBlock2 = document.querySelector(".doc-block2");
+// let docBlock2 = document.querySelector(".doc-block2");
 let docBlock3 = document.querySelector(".doc-block3");
 let closeBtn = document.querySelector(".btn1");
-let closeBtn2 = document.querySelector(".btn2");
+// let closeBtn2 = document.querySelector(".btn2");
 let closeBtn3 = document.querySelector(".btn3");
 
 
@@ -24,9 +24,9 @@ docBtn.addEventListener('click',event => {
     docBlock.classList.toggle('doc-show')
 })
 
-docBtn2.addEventListener('click',event => {
-    docBlock2.classList.toggle('doc-show')
-})
+// docBtn2.addEventListener('click',event => {
+//     docBlock2.classList.toggle('doc-show')
+// })
 
 docBtn3.addEventListener('click',event => {
     docBlock3.classList.toggle('doc-show')
@@ -36,9 +36,9 @@ closeBtn.addEventListener('click',event => {
     docBlock.classList.toggle('doc-show')
 })
 
-closeBtn2.addEventListener('click',event => {
-    docBlock2.classList.toggle('doc-show')
-})
+// closeBtn2.addEventListener('click',event => {
+//     docBlock2.classList.toggle('doc-show')
+// })
 
 closeBtn3.addEventListener('click',event => {
     docBlock3.classList.toggle('doc-show')
