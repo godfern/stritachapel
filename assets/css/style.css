@@ -258,6 +258,10 @@ ul.radiate li h6 {
 	;
 }
 
+.wards-img {
+	float:right
+}
+
 @media screen and (max-width: 600px) {
 
 	img {
@@ -373,7 +377,8 @@ ul.radiate li h6 {
 
 	#issues li.selected img {
 		transform: scale(1);
-		/* width: 85%; */
+		width:240px;
+		height:200px;
 	}
 
 	#issues li img {
