@@ -407,7 +407,7 @@ ul.radiate li h6 {
 	}
 
 
-	.thumbnail .caption img {
+	#cats .thumbnail .caption img,.thumbnail .caption img {
 		margin-right: 10px;
 		max-width: 100%;
 		height: 100%;

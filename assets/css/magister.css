@@ -564,6 +564,11 @@ a:active {
 	margin-left: auto;
 }
 
+#cats .thumbnail .caption img{
+	margin-right: 10px;
+	max-width: 35%;
+}
+
 
 
 /********************************************************/
