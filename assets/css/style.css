@@ -262,6 +262,28 @@ ul.radiate li h6 {
 	float:right
 }
 
+#cats p {
+	display: flex;
+	flex-direction: row;
+}
+
+.inner-content {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-content h5 {
+	text-align: left;
+}
+
+.inner-content ul {
+	margin-left: 15px;
+	padding: 0 0 35px;
+	height: 500px;
+}
+
 @media screen and (max-width: 600px) {
 
 	img {
@@ -411,6 +433,11 @@ ul.radiate li h6 {
 		margin-right: 10px;
 		max-width: 100%;
 		height: 100%;
+	}
+
+	.inner-content ul {
+		margin-left: 15px;
+		padding: 0 0 35px;
 	}
 
 
