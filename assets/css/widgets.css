@@ -130,3 +130,13 @@
     margin-left: auto;
     margin-top: 15px;
 }
+
+.modal-content-screen {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#chapel-weekly-program{
+    margin-bottom: 15px;
+}
