@@ -1,94 +1,198 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Position the image container (needed to position the left and right arrows) */
-  .image-container {
-    position: relative;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-    text-align: center;
-    height: 60%;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
-    flex-shrink: 0;
-    width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-    opacity: 0.6;
-    max-height: 75%;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+/* ─────────────────────────────
+   GALLERY LAYOUT (HORIZONTAL)
+───────────────────────────── */
 
-  .row {
-    display: flex;
-    overflow-x: auto;
+.gallery-grid {
+  display: grid;
+  /* Forces 4 columns horizontally on desktop */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.gallery-item {
+  position: relative; /* IMPORTANT: Keeps button inside the image box */
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  background: #000;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ─────────────────────────────
+   ENLARGE BUTTON (INSIDE TOP RIGHT)
+───────────────────────────── */
+
+.enlarge-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.25); /* Low opacity white */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0; /* Hidden initially */
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Button appears when hovering the image */
+.gallery-item:hover .enlarge-btn {
+  opacity: 1;
+}
+
+.enlarge-btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+/* ─────────────────────────────
+   CLEAN MODAL (ENHANCED VISIBILITY)
+───────────────────────────── */
+
+.gallery-modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92); /* Darker backdrop to make image pop */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-modal.show {
+  display: flex;
+}
+
+.gallery-modal-content {
+  /* FORCING THE SIZE: Covers a large portion of the screen */
+  width: 85vw;   /* Forces image to take up 85% of screen width */
+  height: 85vh;  /* Forces image to take up 85% of screen height */
+  
+  /* MAINTAINING QUALITY: Ensures aspect ratio is kept and not stretched */
+  object-fit: contain; 
+  
+  border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,1);
+  border: 2px solid rgba(255,255,255,0.2);
+  animation: modalZoom 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes modalZoom {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.gallery-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 3rem; /* Slightly larger close icon */
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  transition: transform 0.2s, color 0.2s;
+}
+
+.gallery-close:hover {
+  color: #C9951A;
+  transform: scale(1.1);
+}
+
+/* ─────────────────────────────
+   MOBILE ADJUSTMENTS
+───────────────────────────── */
+@media (max-width: 768px) {
+  .gallery-modal-content {
+    width: 95vw;  /* Near full width on mobile */
+    height: auto; /* Let height adjust naturally on small screens */
+    max-height: 80vh;
   }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+
+@media (max-width: 992px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .enlarge-btn { opacity: 0.9; } /* Always visible on mobile */
+  .gallery-modal { padding: 20px; }
+  .gallery-close { top: 15px; right: 20px; }
+}
+
+
+/* ─────────────────────────────
+   NAVIGATION ARROWS
+───────────────────────────── */
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--gold-light, #C9951A);
+}
+
+.nav-arrow.left { left: 30px; }
+.nav-arrow.right { right: 30px; }
+
+/* Hide the close button background/border to look cleaner */
+.gallery-close {
+  background: none;
+  border: none;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Mobile Adjustments for Arrows */
+@media (max-width: 600px) {
+  .nav-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  .nav-arrow.left { left: 10px; }
+  .nav-arrow.right { right: 10px; }
+}

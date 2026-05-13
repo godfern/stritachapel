@@ -13,7 +13,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+  <!-- LINKED GALLERY CSS -->
+<link rel="stylesheet" href="assets/css/gallery.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -316,19 +317,96 @@
     .event-meta i { color: var(--gold); }
 
     /* ── GALLERY ── */
-    #gallery { background: var(--brown-dark); }
-    #gallery .section-label { color: var(--gold-light); }
-    #gallery .section-title { color: #fff; }
-    #gallery .title-divider { background: var(--gold-light); }
-    .gallery-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem;
-    }
-    .gallery-item {
-      border-radius: 8px; overflow: hidden; aspect-ratio: 4/3;
-      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .gallery-item:hover { transform: scale(1.03); box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+    /* ── GALLERY LAYOUT (HORIZONTAL) ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images horizontally on desktop */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  position: relative; /* Crucial: Keeps the button inside this box */
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  background: #000;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ── ENLARGE BUTTON (TOP RIGHT) ── */
+.enlarge-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.2); /* Very low opacity white */
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* Make it more visible on hover */
+.gallery-item:hover .enlarge-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* ── MODAL STYLES (ENLARGED VIEW) ── */
+.gallery-modal {
+  display: none; 
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-modal.show { display: flex; }
+
+.gallery-modal-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  border: 3px solid rgba(255,255,255,0.1);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.gallery-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive: 2 columns on tablets, 1 on mobile */
+@media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
 
     /* ── CONTACT ── */
     #contact { background: var(--cream-dark); }
@@ -900,19 +978,65 @@
 </section>
 
 <!-- ═══ GALLERY ═══ -->
+<!-- ═══ GALLERY SECTION ═══ -->
 <section id="gallery">
   <div class="section-inner">
     <span class="section-label">Memories</span>
     <h2 class="section-title">Our <span>Gallery</span></h2>
     <div class="title-divider"></div>
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 1" /></div>
-      <div class="gallery-item"><img src="https://stritachapelcarona.in/assets/images/gallery/2.jpg" alt="Gallery 2" /></div>
-      <div class="gallery-item"><img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 3" /></div>
-      <div class="gallery-item"><img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 4" /></div>
-    </div>
+    
+  <div class="gallery-grid">
+  <!-- Item 1 (Index 0) -->
+  <div class="gallery-item">
+    <img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 1">
+    <button class="enlarge-btn" onclick="openGallery(0)">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+  </div>
+
+  <!-- Item 2 (Index 1) -->
+  <div class="gallery-item">
+    <img src="https://stritachapelcarona.in/assets/images/gallery/2.png" alt="Gallery 2">
+    <button class="enlarge-btn" onclick="openGallery(1)">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+  </div>
+
+  <!-- Item 3 (Index 2) -->
+  <div class="gallery-item">
+    <img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 3">
+    <button class="enlarge-btn" onclick="openGallery(2)">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+  </div>
+
+  <!-- Item 4 (Index 3) -->
+  <div class="gallery-item">
+    <img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 4">
+    <button class="enlarge-btn" onclick="openGallery(3)">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+  </div>
+  </div>
   </div>
 </section>
+
+<!-- ═══ GALLERY MODAL HTML ═══ -->
+<div id="galleryModal" class="gallery-modal">
+  <span class="gallery-close" onclick="closeGallery()"><i class="fa-solid fa-xmark"></i></span>
+  
+  <!-- Left Arrow -->
+  <button id="prevBtn" class="nav-arrow left" onclick="changeImage(-1)">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+
+  <img class="gallery-modal-content" id="modalImg" alt="Expanded View">
+
+  <!-- Right Arrow -->
+  <button id="nextBtn" class="nav-arrow right" onclick="changeImage(1)">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
 
 <!-- ═══ ANNOUNCEMENTS CTA ═══ -->
 <div class="announce-cta">
@@ -996,9 +1120,18 @@
   </div>
 </footer>
 
+<!-- ═══ GALLERY MODAL HTML ═══ -->
+<div id="galleryModal" class="gallery-modal">
+  <!-- Minimize/Close button positioned on top right of the enlarged view -->
+  <span class="gallery-close" onclick="closeGallery()"><i class="fa-solid fa-compress"></i></span>
+  <img class="gallery-modal-content" id="modalImg" alt="Expanded View">
+</div>
+
 <script>
+  // Set current year in footer
   document.getElementById('yr').textContent = new Date().getFullYear();
 
+  // Mobile Menu Logic
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
   }
@@ -1010,11 +1143,52 @@
   document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobileMenu');
     const ham = document.getElementById('ham');
-    if (!menu.contains(e.target) && !ham.contains(e.target)) {
-      menu.classList.remove('open');
+    if (menu && ham) {
+      if (!menu.contains(e.target) && !ham.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    }
+  });
+
+  /* ─────────────────────────────────────────────────────────────
+     GALLERY LOGIC (Integrated)
+  ───────────────────────────────────────────────────────────── */
+  
+  function openGallery(src) {
+    const modal = document.getElementById("galleryModal");
+    const modalImg = document.getElementById("modalImg");
+    if (modal && modalImg) {
+      modalImg.src = src;
+      modal.classList.add("show"); // Triggers the flex display in gallery.css
+      document.body.style.overflow = "hidden"; // Prevent scrolling the website
+    }
+  }
+
+  function closeGallery() {
+    const modal = document.getElementById("galleryModal");
+    if (modal) {
+      modal.classList.remove("show"); // Hides the modal
+      document.body.style.overflow = "auto"; // Re-enable website scrolling
+    }
+  }
+
+  // Close gallery if user clicks on the dark background area
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById("galleryModal");
+    if (e.target === modal) {
+      closeGallery();
+    }
+  });
+
+  // Support for Escape key to close the enlarged image
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+      closeGallery();
     }
   });
 </script>
 
+<!-- LINKED GALLERY JS -->
+<script src="assets/js/gallery.js"></script>
 </body>
 </html>
