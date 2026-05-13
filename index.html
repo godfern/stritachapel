@@ -979,48 +979,51 @@
 
 <!-- ═══ GALLERY ═══ -->
 <!-- ═══ GALLERY SECTION ═══ -->
+<!-- ═══ GALLERY SECTION ═══ -->
 <section id="gallery">
   <div class="section-inner">
     <span class="section-label">Memories</span>
     <h2 class="section-title">Our <span>Gallery</span></h2>
     <div class="title-divider"></div>
     
-  <div class="gallery-grid">
-  <!-- Item 1 (Index 0) -->
-  <div class="gallery-item">
-    <img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 1">
-    <button class="enlarge-btn" onclick="openGallery(0)">
-      <i class="fa-solid fa-expand"></i>
-    </button>
-  </div>
+    <div class="gallery-slider-container">
+      <!-- Slider Navigation Buttons (Visible only if > 4 images) -->
+      <button class="slider-nav prev" id="sliderPrev" onclick="moveSlider(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
 
-  <!-- Item 2 (Index 1) -->
-  <div class="gallery-item">
-    <img src="https://stritachapelcarona.in/assets/images/gallery/2.png" alt="Gallery 2">
-    <button class="enlarge-btn" onclick="openGallery(1)">
-      <i class="fa-solid fa-expand"></i>
-    </button>
-  </div>
+      <div class="gallery-slider-wrapper">
+        <div class="gallery-grid" id="galleryTrack">
+          <!-- Item 0 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 1">
+            <button class="enlarge-btn" onclick="openGallery(0)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- Item 1 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/2.png" alt="Gallery 2">
+            <button class="enlarge-btn" onclick="openGallery(1)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- Item 2 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 3">
+            <button class="enlarge-btn" onclick="openGallery(2)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- Item 3 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 4">
+            <button class="enlarge-btn" onclick="openGallery(3)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- FUTURE IMAGES ADDED HERE WILL AUTOMATICALLY WORK -->
+        </div>
+      </div>
 
-  <!-- Item 3 (Index 2) -->
-  <div class="gallery-item">
-    <img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 3">
-    <button class="enlarge-btn" onclick="openGallery(2)">
-      <i class="fa-solid fa-expand"></i>
-    </button>
-  </div>
-
-  <!-- Item 4 (Index 3) -->
-  <div class="gallery-item">
-    <img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 4">
-    <button class="enlarge-btn" onclick="openGallery(3)">
-      <i class="fa-solid fa-expand"></i>
-    </button>
-  </div>
-  </div>
+      <button class="slider-nav next" id="sliderNext" onclick="moveSlider(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
   </div>
 </section>
-
 <!-- ═══ GALLERY MODAL HTML ═══ -->
 <div id="galleryModal" class="gallery-modal">
   <span class="gallery-close" onclick="closeGallery()"><i class="fa-solid fa-xmark"></i></span>

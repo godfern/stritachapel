@@ -1,18 +1,32 @@
 /* ─────────────────────────────
-   GALLERY LAYOUT (HORIZONTAL)
+   SLIDER CONTAINER & TRACK 
+   (Controls horizontal sliding)
 ───────────────────────────── */
 
-.gallery-grid {
-  display: grid;
-  /* Forces 4 columns horizontally on desktop */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-top: 1rem;
+.gallery-slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
+  margin-top: 1rem;
+}
+
+.gallery-slider-wrapper {
+  overflow: hidden; /* Acts as the window hiding extra images */
+  width: 100%;
+  border-radius: 12px;
+}
+
+.gallery-grid {
+  display: flex; /* Changed from Grid to Flex to allow horizontal track */
+  gap: 1.5rem;
+  width: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Professional smooth slide */
 }
 
 .gallery-item {
-  position: relative; /* IMPORTANT: Keeps button inside the image box */
+  flex: 0 0 calc(25% - 1.125rem); /* Forces exactly 4 items per row on desktop */
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4/3;
@@ -33,6 +47,38 @@
 }
 
 /* ─────────────────────────────
+   SMALL SLIDER ARROWS (FOR THE ROW)
+───────────────────────────── */
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.slider-nav:hover {
+  background: #C9951A;
+  color: #000;
+  border-color: #C9951A;
+}
+
+/* Position arrows just outside the image row */
+.slider-nav.prev { left: -55px; }
+.slider-nav.next { right: -55px; }
+
+/* ─────────────────────────────
    ENLARGE BUTTON (INSIDE TOP RIGHT)
 ───────────────────────────── */
 
@@ -42,7 +88,7 @@
   right: 12px;
   width: 38px;
   height: 38px;
-  background: rgba(255, 255, 255, 0.25); /* Low opacity white */
+  background: rgba(255, 255, 255, 0.25);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -51,18 +97,14 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  opacity: 0; /* Hidden initially */
+  opacity: 0;
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 5;
 }
 
-/* Button appears when hovering the image */
 .gallery-item:hover .enlarge-btn {
   opacity: 1;
-}
-
-.enlarge-btn:hover {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   color: #000;
 }
 
@@ -75,7 +117,7 @@
   position: fixed;
   z-index: 9999;
   inset: 0;
-  background: rgba(0, 0, 0, 0.92); /* Darker backdrop to make image pop */
+  background: rgba(0, 0, 0, 0.92);
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -86,13 +128,9 @@
 }
 
 .gallery-modal-content {
-  /* FORCING THE SIZE: Covers a large portion of the screen */
-  width: 85vw;   /* Forces image to take up 85% of screen width */
-  height: 85vh;  /* Forces image to take up 85% of screen height */
-  
-  /* MAINTAINING QUALITY: Ensures aspect ratio is kept and not stretched */
+  width: 85vw;   
+  height: 85vh;  
   object-fit: contain; 
-  
   border-radius: 4px;
   box-shadow: 0 0 60px rgba(0,0,0,1);
   border: 2px solid rgba(255,255,255,0.2);
@@ -108,12 +146,14 @@
   position: absolute;
   top: 15px;
   right: 25px;
-  font-size: 3rem; /* Slightly larger close icon */
+  font-size: 3rem;
   color: #fff;
   cursor: pointer;
   z-index: 10000;
-  text-shadow: 0 0 10px rgba(0,0,0,0.8);
-  transition: transform 0.2s, color 0.2s;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: none;
+  border: none;
+  transition: 0.2s;
 }
 
 .gallery-close:hover {
@@ -122,34 +162,7 @@
 }
 
 /* ─────────────────────────────
-   MOBILE ADJUSTMENTS
-───────────────────────────── */
-@media (max-width: 768px) {
-  .gallery-modal-content {
-    width: 95vw;  /* Near full width on mobile */
-    height: auto; /* Let height adjust naturally on small screens */
-    max-height: 80vh;
-  }
-}
-
-/* ─────────────────────────────
-   RESPONSIVE
-───────────────────────────── */
-
-@media (max-width: 992px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 600px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-  .enlarge-btn { opacity: 0.9; } /* Always visible on mobile */
-  .gallery-modal { padding: 20px; }
-  .gallery-close { top: 15px; right: 20px; }
-}
-
-
-/* ─────────────────────────────
-   NAVIGATION ARROWS
+   MODAL NAVIGATION ARROWS
 ───────────────────────────── */
 
 .nav-arrow {
@@ -173,21 +186,33 @@
 
 .nav-arrow:hover {
   background: rgba(255, 255, 255, 0.3);
-  color: var(--gold-light, #C9951A);
+  color: #C9951A;
 }
 
 .nav-arrow.left { left: 30px; }
 .nav-arrow.right { right: 30px; }
 
-/* Hide the close button background/border to look cleaner */
-.gallery-close {
-  background: none;
-  border: none;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+/* ─────────────────────────────
+   RESPONSIVE & MOBILE
+───────────────────────────── */
+
+@media (max-width: 1100px) {
+  /* Bring slider arrows inside if screen is too narrow */
+  .slider-nav.prev { left: 10px; }
+  .slider-nav.next { right: 10px; }
 }
 
-/* Mobile Adjustments for Arrows */
+@media (max-width: 768px) {
+  .gallery-item { flex: 0 0 100%; } /* Show 1 image at a time on mobile */
+  .gallery-modal-content {
+    width: 95vw;
+    height: auto;
+    max-height: 80vh;
+  }
+}
+
 @media (max-width: 600px) {
+  .enlarge-btn { opacity: 0.9; }
   .nav-arrow {
     width: 45px;
     height: 45px;
