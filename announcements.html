@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="St Rita's Chapel Carona — Community Notice Board. Latest announcements, events and news." />
+  <meta property="og:title" content="Announcements — St Rita's Chapel Carona" />
+  <meta property="og:description" content="Latest notices, events and announcements from St Rita's Chapel, Carona, Goa." />
+  <meta property="og:image" content="https://stritachapelcarona.in/assets/images/banner.png" />
+  <meta property="og:url" content="https://stritachapelcarona.in/announcements.html" />
+  <title>Announcements — St Rita's Chapel Carona</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Caveat:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FDF6E3;
+      --brown: #5C3D2E;
+      --brown-dark: #3B2314;
+      --gold: #C9951A;
+      --gold-light: #E8B84B;
+      --terracotta: #B5614A;
+      --rose: #F0D9D0;
+      --cork: #C19A6B;
+      --cork-dark: #A0784A;
+      --pin-red: #CC3333;
+      --pin-blue: #2255AA;
+      --pin-green: #336633;
+      --pin-gold: #BB8800;
+      --nav-h: 70px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--brown-dark);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      background: var(--brown-dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .nav-brand img { height: 46px; width: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
+    .nav-brand span { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 1.05rem; font-weight: 600; line-height: 1.2; }
+    .nav-back {
+      display: flex; align-items: center; gap: 0.5rem;
+      color: rgba(255,255,255,0.8); font-size: 0.85rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none;
+      padding: 0.4rem 0.9rem; border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.25); transition: 0.2s;
+    }
+    .nav-back:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding-top: var(--nav-h);
+      background: var(--brown-dark);
+      text-align: center;
+      padding-bottom: 3rem;
+    }
+    .page-header-inner { padding: 3rem 1.5rem 1rem; }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+    .page-header p { color: rgba(255,255,255,0.65); font-size: 1rem; }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      background: var(--cork-dark);
+      padding: 1rem 2rem;
+      display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; justify-content: center;
+    }
+    .filter-bar span { color: rgba(255,255,255,0.7); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+    .filter-btn {
+      padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; border: 2px solid rgba(255,255,255,0.3); background: transparent;
+      color: rgba(255,255,255,0.75); transition: 0.2s; letter-spacing: 0.04em;
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--brown-dark); }
+
+    /* ── NOTICE BOARD ── */
+    .board-wrap {
+      padding: 3rem 1.5rem 5rem;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(160,120,74,0.08) 28px, rgba(160,120,74,0.08) 29px),
+        repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(160,120,74,0.08) 28px, rgba(160,120,74,0.08) 29px),
+        #C9A96B;
+      min-height: 600px;
+    }
+
+    /* Cork texture overlay via radial gradients */
+    .board-frame {
+      max-width: 1200px; margin: 0 auto;
+      background: var(--cork);
+      border-radius: 8px;
+      padding: 2.5rem;
+      box-shadow:
+        inset 0 0 60px rgba(100,60,20,0.3),
+        0 8px 40px rgba(0,0,0,0.35),
+        0 2px 8px rgba(0,0,0,0.2);
+      border: 10px solid #8B5E3C;
+      position: relative;
+    }
+
+    /* Corner screws decoration */
+    .board-frame::before, .board-frame::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 18px;
+      background: radial-gradient(circle at 40% 35%, #999, #444);
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .board-frame::before { top: 10px; left: 10px; }
+    .board-frame::after { top: 10px; right: 10px; }
+
+    .board-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── NOTICES GRID ── */
+    .notices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+
+    .notice {
+      position: relative;
+      background: #FFFEF5;
+      border-radius: 2px;
+      padding: 2.5rem 1.5rem 1.5rem;
+      box-shadow:
+        2px 2px 8px rgba(0,0,0,0.25),
+        4px 4px 16px rgba(0,0,0,0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: default;
+    }
+
+    .notice:nth-child(odd) { transform: rotate(-1.2deg); }
+    .notice:nth-child(even) { transform: rotate(0.8deg); }
+    .notice:nth-child(3n) { transform: rotate(-0.4deg); }
+    .notice:hover {
+      transform: rotate(0deg) scale(1.03) !important;
+      box-shadow: 4px 8px 30px rgba(0,0,0,0.35);
+      z-index: 10;
+    }
+
+    /* Pin */
+    .pin {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.45), inset 0 -2px 4px rgba(0,0,0,0.2);
+    }
+    .pin::after {
+      content: '';
+      position: absolute;
+      bottom: -12px; left: 50%;
+      transform: translateX(-50%);
+      width: 3px; height: 14px;
+      background: rgba(0,0,0,0.35);
+      border-radius: 0 0 2px 2px;
+    }
+    .pin-red    { background: radial-gradient(circle at 35% 30%, #FF6666, var(--pin-red)); }
+    .pin-blue   { background: radial-gradient(circle at 35% 30%, #6688EE, var(--pin-blue)); }
+    .pin-green  { background: radial-gradient(circle at 35% 30%, #66AA66, var(--pin-green)); }
+    .pin-gold   { background: radial-gradient(circle at 35% 30%, #EEcc44, var(--pin-gold)); }
+
+    /* Notice category tag */
+    .notice-tag {
+      display: inline-block;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; padding: 2px 8px; border-radius: 20px;
+      margin-bottom: 0.6rem;
+    }
+    .tag-announcement { background: #FFF0D0; color: #8B5E00; border: 1px solid #E8B84B; }
+    .tag-event        { background: #D0F0FF; color: #005580; border: 1px solid #55AADD; }
+    .tag-mass         { background: #F0D0FF; color: #550055; border: 1px solid #BB55BB; }
+    .tag-community    { background: #D0FFD8; color: #005515; border: 1px solid #55AA66; }
+    .tag-urgent       { background: #FFD0D0; color: #880000; border: 1px solid #CC5555; }
+
+    .notice-date {
+      font-size: 0.75rem; color: #999; margin-bottom: 0.5rem;
+      font-family: 'Caveat', cursive;
+      font-size: 0.95rem; color: #888;
+    }
+
+    .notice h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: #2C1A0E;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .notice p {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .notice-meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .notice-meta span {
+      display: flex; align-items: center; gap: 0.3rem;
+      font-size: 0.78rem; color: #777;
+    }
+    .notice-meta i { color: var(--terracotta); }
+
+    /* Ruled lines on notice paper */
+    .notice-ruled {
+      background-image: repeating-linear-gradient(
+        transparent, transparent 24px,
+        rgba(150,180,220,0.25) 24px, rgba(150,180,220,0.25) 25px
+      );
+      background-size: 100% 25px;
+      background-position: 0 35px;
+    }
+
+    /* Share row */
+    .share-row {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed #DDD;
+    }
+    .share-row span { font-size: 0.75rem; color: #AAA; margin-right: 0.25rem; }
+    .share-icon {
+      width: 30px; height: 30px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; color: #fff; cursor: pointer;
+      transition: transform 0.15s, opacity 0.15s; border: none;
+      text-decoration: none;
+    }
+    .share-icon:hover { transform: scale(1.15); opacity: 0.9; }
+    .share-icon.wa  { background: #25d366; }
+    .share-icon.fb  { background: #1877f2; }
+    .share-icon.tw  { background: #1DA1F2; }
+    .share-icon.cp  { background: #888; }
+    .share-icon.wa:hover { background: #20b858; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      text-align: center; padding: 4rem 2rem; color: rgba(255,255,255,0.6);
+      display: none;
+    }
+    .empty-state i { font-size: 3rem; margin-bottom: 1rem; }
+
+    /* ── TOAST ── */
+    .toast {
+      position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: var(--brown-dark); color: #fff; padding: 0.75rem 1.75rem;
+      border-radius: 30px; font-size: 0.9rem; font-weight: 700;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.3s;
+      z-index: 9999; pointer-events: none;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ── ADD NOTICE BUTTON ── */
+    .add-notice-btn {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--gold); color: var(--brown-dark);
+      border: none; border-radius: 30px; padding: 0.6rem 1.5rem;
+      font-weight: 700; font-size: 0.88rem; cursor: pointer;
+      transition: transform 0.2s; text-transform: uppercase; letter-spacing: 0.05em;
+      margin: 0 auto 1.5rem; text-decoration: none;
+    }
+    .add-notice-btn:hover { transform: translateY(-2px); }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+      z-index: 2000; display: none; align-items: center; justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #fff; border-radius: 12px; padding: 2rem;
+      max-width: 500px; width: 100%;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+      max-height: 90vh; overflow-y: auto;
+    }
+    .modal h2 { font-family: 'Playfair Display', serif; color: var(--brown-dark); margin-bottom: 1.25rem; }
+    .modal label { display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brown); margin-bottom: 0.3rem; margin-top: 1rem; }
+    .modal input, .modal textarea, .modal select {
+      width: 100%; padding: 0.65rem 0.9rem; border-radius: 8px;
+      border: 1.5px solid #DDD; font-family: 'Lato', sans-serif; font-size: 0.95rem;
+      color: var(--brown-dark); background: var(--cream); transition: border 0.2s;
+    }
+    .modal input:focus, .modal textarea:focus, .modal select:focus { border-color: var(--gold); outline: none; }
+    .modal textarea { height: 100px; resize: vertical; }
+    .modal-actions { display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: flex-end; }
+    .btn-cancel { background: #EEE; color: #666; border: none; border-radius: 8px; padding: 0.6rem 1.25rem; cursor: pointer; font-weight: 700; }
+    .btn-post { background: var(--gold); color: var(--brown-dark); border: none; border-radius: 8px; padding: 0.6rem 1.5rem; cursor: pointer; font-weight: 700; transition: 0.2s; }
+    .btn-post:hover { background: var(--gold-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark); color: rgba(255,255,255,0.5);
+      padding: 2rem 1.5rem; text-align: center;
+    }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    footer p { font-size: 0.85rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .board-frame { padding: 1.5rem 1rem; }
+      .notices-grid { grid-template-columns: 1fr; }
+      .notice:nth-child(n) { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-brand">
+    <img src="https://stritachapelcarona.in/assets/images/rita.png" alt="St Rita" />
+    <span>St Rita's Chapel<br/>Carona</span>
+  </div>
+  <a href="index.html" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Back to Website</a>
+</nav>
+
+<!-- ═══ PAGE HEADER ═══ -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1><i class="fa-solid fa-clipboard-list" style="font-size:0.8em; margin-right:0.4rem;"></i>Notice Board</h1>
+    <p>Latest announcements, events &amp; news from St Rita's Chapel Community, Carona</p>
+  </div>
+</div>
+
+<!-- ═══ FILTER BAR ═══ -->
+<div class="filter-bar">
+  <span>Filter:</span>
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="announcement">Announcements</button>
+  <button class="filter-btn" data-filter="event">Events</button>
+  <button class="filter-btn" data-filter="mass">Mass</button>
+  <button class="filter-btn" data-filter="community">Community</button>
+</div>
+
+<!-- ═══ NOTICE BOARD ═══ -->
+<div class="board-wrap">
+  <div class="board-frame">
+    <div class="board-title">📌 St Rita's Chapel — Community Notice Board</div>
+
+    <div style="text-align:center;">
+      <button class="add-notice-btn" onclick="document.getElementById('addModal').classList.add('open')">
+        <i class="fa-solid fa-plus"></i> Post a Notice
+      </button>
+    </div>
+
+    <div class="notices-grid" id="noticesGrid">
+      <!-- Notices are rendered by JS below -->
+    </div>
+
+    <div class="empty-state" id="emptyState">
+      <i class="fa-solid fa-thumbtack"></i>
+      <p>No notices found for this category.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ADD NOTICE MODAL ═══ -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal">
+    <h2>📌 Post a New Notice</h2>
+    <label>Title *</label>
+    <input type="text" id="newTitle" placeholder="e.g. Sunday Mass Change" />
+    <label>Category *</label>
+    <select id="newCategory">
+      <option value="announcement">Announcement</option>
+      <option value="event">Event</option>
+      <option value="mass">Mass</option>
+      <option value="community">Community</option>
+      <option value="urgent">Urgent</option>
+    </select>
+    <label>Message *</label>
+    <textarea id="newMessage" placeholder="Write the notice content here..."></textarea>
+    <label>Date</label>
+    <input type="date" id="newDate" />
+    <label>Venue / Location (optional)</label>
+    <input type="text" id="newVenue" placeholder="e.g. Chapel Hall" />
+    <label>Time (optional)</label>
+    <input type="text" id="newTime" placeholder="e.g. 9:00 AM" />
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="document.getElementById('addModal').classList.remove('open')">Cancel</button>
+      <button class="btn-post" onclick="postNotice()">Post Notice</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TOAST ═══ -->
+<div class="toast" id="toast"></div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p>
+    <a href="index.html">← Back to St Rita's Chapel Website</a><br/><br/>
+    &copy; <span id="yr"></span> St Rita's Chapel, Carona, Aldona, Goa.
+  </p>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ── Default Notices ──
+  const defaultNotices = [
+    {
+      id: 1,
+      category: 'event',
+      pin: 'pin-red',
+      title: 'Feast of St Rita de Cascia — 22 May',
+      body: 'Our most celebrated feast day! Join us for the special Novena, Solemn High Mass, and evening Procession. All parishioners and devotees are warmly welcome.',
+      date: '2025-05-22',
+      venue: 'St Rita\'s Chapel, Carona',
+      time: 'Mass at 10:00 AM',
+    },
+    {
+      id: 2,
+      category: 'mass',
+      pin: 'pin-blue',
+      title: 'Sunday Mass Timings',
+      body: 'Kindly note our regular Sunday Mass schedule:\n• 8:00 AM — Konkani Mass\n• 10:00 AM — English Mass\nAll are welcome to attend.',
+      date: '2025-05-01',
+      venue: 'St Rita\'s Chapel',
+      time: '8:00 AM & 10:00 AM',
+    },
+    {
+      id: 3,
+      category: 'announcement',
+      pin: 'pin-gold',
+      title: 'Releasing of the Bhagevont Ritacho Pormoll',
+      body: 'The souvenir was released through the hands of Bishop Allwyn Barreto on the occasion of 150 years of St Rita Chapel Carona. Copies are available at the chapel office.',
+      date: '2014-05-22',
+      venue: 'St Rita\'s Chapel, Carona',
+      time: '',
+    },
+    {
+      id: 4,
+      category: 'event',
+      pin: 'pin-green',
+      title: 'Tiatr — Char Dis Sonvsarantle',
+      body: 'A wonderful Konkani Tiatr performance for the whole community. Tickets available at ₹100 per person. Don\'t miss this entertaining evening!',
+      date: '',
+      venue: 'Irmitichea Adrar',
+      time: '7:00 PM',
+    },
+    {
+      id: 5,
+      category: 'community',
+      pin: 'pin-red',
+      title: 'Youth Group Meeting',
+      body: 'The Youth Group will hold its regular monthly meeting. All youth members are requested to attend. New members are most welcome to join!',
+      date: '',
+      venue: 'Chapel Hall',
+      time: '5:00 PM Saturday',
+    },
+    {
+      id: 6,
+      category: 'announcement',
+      pin: 'pin-blue',
+      title: 'Catechism Classes Resume',
+      body: 'Sunday catechism classes will resume this week. Parents are requested to ensure their children attend regularly. Classes begin after the 8:00 AM Mass.',
+      date: '',
+      venue: 'Catechism Room',
+      time: 'After 8:00 AM Mass',
+    },
+    {
+      id: 7,
+      category: 'mass',
+      pin: 'pin-gold',
+      title: 'Confession — Saturday Evening',
+      body: 'Confessions will be heard every Saturday from 6:00 PM to 7:00 PM. Fr. Joaquim Fernandes will be available. You may also contact the chapel for an appointment.',
+      date: '',
+      venue: 'Chapel Confessional',
+      time: '6:00 PM – 7:00 PM',
+    },
+    {
+      id: 8,
+      category: 'community',
+      pin: 'pin-green',
+      title: 'Choir Practice — All Welcome',
+      body: 'The Choir Group meets for practice regularly under the guidance of Noel D\'Souza. If you have a love for singing and wish to join the choir, please do come along!',
+      date: '',
+      venue: 'Chapel',
+      time: 'Check with Noel D\'Souza',
+    },
+  ];
+
+  const STORAGE_KEY = 'strita_notices';
+
+  function loadNotices() {
+    try {
+      const saved = sessionStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : [...defaultNotices];
+    } catch(e) { return [...defaultNotices]; }
+  }
+
+  function saveNotices(notices) {
+    try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(notices)); } catch(e) {}
+  }
+
+  let notices = loadNotices();
+
+  const tagMap = {
+    announcement: { label: 'Announcement', cls: 'tag-announcement' },
+    event:        { label: 'Event',        cls: 'tag-event' },
+    mass:         { label: 'Mass',         cls: 'tag-mass' },
+    community:    { label: 'Community',    cls: 'tag-community' },
+    urgent:       { label: 'Urgent',       cls: 'tag-urgent' },
+  };
+
+  const pinColors = ['pin-red','pin-blue','pin-green','pin-gold'];
+
+  function formatDate(dateStr) {
+    if (!dateStr) return '';
+    try {
+      const d = new Date(dateStr + 'T00:00:00');
+      return d.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric' });
+    } catch(e) { return dateStr; }
+  }
+
+  function shareUrl(notice) {
+    const title = encodeURIComponent(notice.title + ' — St Rita\'s Chapel, Carona');
+    const body  = encodeURIComponent(notice.body + '\n\nSt Rita\'s Chapel, Carona, Goa\nhttps://stritachapelcarona.in/announcements.html');
+    return { title, body };
+  }
+
+  function buildCard(notice) {
+    const tag = tagMap[notice.category] || tagMap['announcement'];
+    const s = shareUrl(notice);
+    const waUrl = `https://wa.me/?text=${s.title}%0A%0A${s.body}`;
+    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://stritachapelcarona.in/announcements.html')}&quote=${s.title}`;
+    const twUrl = `https://twitter.com/intent/tweet?text=${s.title}&url=${encodeURIComponent('https://stritachapelcarona.in/announcements.html')}`;
+
+    const metaHtml = [
+      notice.date   ? `<span><i class="fa-solid fa-calendar"></i> ${formatDate(notice.date)}</span>` : '',
+      notice.venue  ? `<span><i class="fa-solid fa-location-dot"></i> ${notice.venue}</span>` : '',
+      notice.time   ? `<span><i class="fa-solid fa-clock"></i> ${notice.time}</span>` : '',
+    ].filter(Boolean).join('');
+
+    return `
+      <div class="notice notice-ruled" data-category="${notice.category}">
+        <div class="pin ${notice.pin || pinColors[notice.id % 4]}"></div>
+        <span class="notice-tag ${tag.cls}">${tag.label}</span>
+        ${notice.date ? `<div class="notice-date">${formatDate(notice.date)}</div>` : ''}
+        <h3>${notice.title}</h3>
+        <p>${notice.body.replace(/\n/g,'<br/>')}</p>
+        ${metaHtml ? `<div class="notice-meta">${metaHtml}</div>` : ''}
+        <div class="share-row">
+          <span>Share:</span>
+          <a class="share-icon wa" href="${waUrl}" target="_blank" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="share-icon fb" href="${fbUrl}" target="_blank" title="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="share-icon tw" href="${twUrl}" target="_blank" title="Share on X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <button class="share-icon cp" onclick="copyNotice('${notice.title.replace(/'/g,"\\'")}','${notice.body.replace(/'/g,"\\'").replace(/\n/g,' ')}')" title="Copy to clipboard"><i class="fa-solid fa-copy"></i></button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNotices(filter = 'all') {
+    const grid = document.getElementById('noticesGrid');
+    const empty = document.getElementById('emptyState');
+    const filtered = filter === 'all' ? notices : notices.filter(n => n.category === filter);
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '';
+      empty.style.display = 'block';
+    } else {
+      empty.style.display = 'none';
+      grid.innerHTML = filtered.map(buildCard).join('');
+    }
+  }
+
+  // Filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      renderNotices(this.dataset.filter);
+    });
+  });
+
+  // Post a new notice
+  function postNotice() {
+    const title = document.getElementById('newTitle').value.trim();
+    const category = document.getElementById('newCategory').value;
+    const body = document.getElementById('newMessage').value.trim();
+    const date = document.getElementById('newDate').value;
+    const venue = document.getElementById('newVenue').value.trim();
+    const time = document.getElementById('newTime').value.trim();
+
+    if (!title || !body) {
+      showToast('Please fill in the title and message.');
+      return;
+    }
+
+    const newNotice = {
+      id: Date.now(),
+      category,
+      pin: pinColors[Math.floor(Math.random() * pinColors.length)],
+      title,
+      body,
+      date,
+      venue,
+      time,
+    };
+
+    notices.unshift(newNotice);
+    saveNotices(notices);
+
+    document.getElementById('addModal').classList.remove('open');
+    document.getElementById('newTitle').value = '';
+    document.getElementById('newMessage').value = '';
+    document.getElementById('newDate').value = '';
+    document.getElementById('newVenue').value = '';
+    document.getElementById('newTime').value = '';
+
+    // Reset filter to all
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-filter="all"]').classList.add('active');
+    renderNotices('all');
+    showToast('Notice posted successfully!');
+  }
+
+  // Copy to clipboard
+  function copyNotice(title, body) {
+    const text = `${title}\n\n${body}\n\nSt Rita's Chapel, Carona, Goa\nhttps://stritachapelcarona.in/announcements.html`;
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('Copied to clipboard!');
+    }).catch(() => {
+      showToast('Could not copy. Please try manually.');
+    });
+  }
+
+  // Toast notification
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  // Close modal on overlay click
+  document.getElementById('addModal').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('open');
+  });
+
+  // Set today as default date for new notices
+  document.getElementById('newDate').value = new Date().toISOString().split('T')[0];
+
+  // Initial render
+  renderNotices('all');
+</script>
+
+</body>
+</html>

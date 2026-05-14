@@ -1,94 +1,223 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Position the image container (needed to position the left and right arrows) */
-  .image-container {
-    position: relative;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-    text-align: center;
-    height: 60%;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
-    flex-shrink: 0;
-    width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-    opacity: 0.6;
-    max-height: 75%;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+/* ─────────────────────────────
+   SLIDER CONTAINER & TRACK 
+   (Controls horizontal sliding)
+───────────────────────────── */
 
-  .row {
-    display: flex;
-    overflow-x: auto;
+.gallery-slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.gallery-slider-wrapper {
+  overflow: hidden; /* Acts as the window hiding extra images */
+  width: 100%;
+  border-radius: 12px;
+}
+
+.gallery-grid {
+  display: flex; /* Changed from Grid to Flex to allow horizontal track */
+  gap: 1.5rem;
+  width: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Professional smooth slide */
+}
+
+.gallery-item {
+  flex: 0 0 calc(25% - 1.125rem); /* Forces exactly 4 items per row on desktop */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  background: #000;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ─────────────────────────────
+   SMALL SLIDER ARROWS (FOR THE ROW)
+───────────────────────────── */
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.slider-nav:hover {
+  background: #C9951A;
+  color: #000;
+  border-color: #C9951A;
+}
+
+/* Position arrows just outside the image row */
+.slider-nav.prev { left: -55px; }
+.slider-nav.next { right: -55px; }
+
+/* ─────────────────────────────
+   ENLARGE BUTTON (INSIDE TOP RIGHT)
+───────────────────────────── */
+
+.enlarge-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.gallery-item:hover .enlarge-btn {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+/* ─────────────────────────────
+   CLEAN MODAL (ENHANCED VISIBILITY)
+───────────────────────────── */
+
+.gallery-modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-modal.show {
+  display: flex;
+}
+
+.gallery-modal-content {
+  width: 85vw;   
+  height: 85vh;  
+  object-fit: contain; 
+  border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,1);
+  border: 2px solid rgba(255,255,255,0.2);
+  animation: modalZoom 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes modalZoom {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.gallery-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: none;
+  border: none;
+  transition: 0.2s;
+}
+
+.gallery-close:hover {
+  color: #C9951A;
+  transform: scale(1.1);
+}
+
+/* ─────────────────────────────
+   MODAL NAVIGATION ARROWS
+───────────────────────────── */
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #C9951A;
+}
+
+.nav-arrow.left { left: 30px; }
+.nav-arrow.right { right: 30px; }
+
+/* ─────────────────────────────
+   RESPONSIVE & MOBILE
+───────────────────────────── */
+
+@media (max-width: 1100px) {
+  /* Bring slider arrows inside if screen is too narrow */
+  .slider-nav.prev { left: 10px; }
+  .slider-nav.next { right: 10px; }
+}
+
+@media (max-width: 768px) {
+  .gallery-item { flex: 0 0 100%; } /* Show 1 image at a time on mobile */
+  .gallery-modal-content {
+    width: 95vw;
+    height: auto;
+    max-height: 80vh;
   }
+}
+
+@media (max-width: 600px) {
+  .enlarge-btn { opacity: 0.9; }
+  .nav-arrow {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  .nav-arrow.left { left: 10px; }
+  .nav-arrow.right { right: 10px; }
+}

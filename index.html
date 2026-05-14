@@ -1,1193 +1,1197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="St Rita Pray For Us">
-	<meta name="author" content="Godfrey Fernandes">
-	<meta property="og:type" content="website">
-	<meta name="og_site_name" property="og:site_name" content="stritachapelcarona.com">
-	<meta name="og_title" property="og:title" content="St. Rita's Chapel, Carona" />
-	<meta name="og_url" property="og:url" content="https://www.stritachapelcarona.com" />
-	<meta name="og_description" property="og:description" content="St Rita Pray For Us">
-	<meta name="og_image" property="og:image"
-		content="https://dl.dropboxusercontent.com//s/cos7cnt0l18rgep/logo-yoursite.png" />
-	<meta name="twitter:title" content="St. Rita's Chapel, Carona">
-	<meta name="twitter:description" content="St Rita Pray For Us">
-	<meta name="twitter:image" content="https://dl.dropboxusercontent.com//s/cos7cnt0l18rgep/logo-yoursite.png">
-	<title>St Rita's Chapel-Carona</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="St Rita's Chapel, Carona, Aldona, Goa — Official Website. Mass timings, history, events and community announcements." />
+  <meta name="author" content="Godfrey Fernandes" />
+  <meta property="og:title" content="St Rita's Chapel - Carona" />
+  <meta property="og:description" content="Welcome to St Rita's Chapel, Carona, Aldona, Goa. Join our community of faith." />
+  <meta property="og:image" content="https://stritachapelcarona.in/assets/images/banner.png" />
+  <meta property="og:url" content="https://stritachapelcarona.in" />
+  <title>St Rita's Chapel – Carona</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- LINKED GALLERY CSS -->
+<link rel="stylesheet" href="assets/css/gallery.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+    :root {
+      --cream: #FDF6E3;
+      --cream-dark: #F5EAC8;
+      --brown: #5C3D2E;
+      --brown-dark: #3B2314;
+      --gold: #C9951A;
+      --gold-light: #E8B84B;
+      --terracotta: #B5614A;
+      --rose: #F0D9D0;
+      --text: #2C1A0E;
+      --text-mid: #5C3D2E;
+      --text-soft: #8B6355;
+      --white: #FFFFFF;
+      --nav-h: 70px;
+    }
 
-	<!-- Bootstrap itself -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    html { scroll-behavior: smooth; }
 
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="assets/css/magister.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/sky.css">
-	<link rel="stylesheet" href="assets/css/style.css" media="screen" />
-	<link rel="stylesheet" href="assets/css/widgets.css" media="screen" />
-	<link rel="stylesheet" href="assets/css/gallery.css" media="screen" />
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+    }
 
-	<!-- Fonts -->
-	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.3;
+    }
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    a { color: inherit; text-decoration: none; }
 
-	<script>
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className === "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
-	</script>
+    img { max-width: 100%; display: block; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      background: var(--brown-dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .nav-brand img { height: 46px; width: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
+    .nav-brand span {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 0.25rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #EEE;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.7rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover { background: var(--gold); color: var(--brown-dark); }
+    .nav-links .announce-btn a {
+      background: var(--terracotta);
+      color: #fff;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+    }
+    .nav-links .announce-btn a:hover { background: var(--gold); color: var(--brown-dark); }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+    }
+    .hamburger span { display: block; width: 24px; height: 2px; background: #EEE; border-radius: 2px; transition: 0.3s; }
+
+    .mobile-menu {
+      display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: var(--brown-dark); z-index: 999; padding: 1rem 2rem 1.5rem;
+      flex-direction: column; gap: 0.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: #EEE; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .mobile-menu a:hover { color: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+      padding-top: var(--nav-h);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/rita-statue.jpg') center center / cover no-repeat;
+    }
+    /* Dark gradient overlay so text is readable */
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(30,10,5,0.45) 0%,
+        rgba(30,10,5,0.55) 50%,
+        rgba(30,10,5,0.75) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      padding: 2rem; max-width: 780px;
+    }
+    .hero-content h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.7);
+    }
+    .hero-content h1 span { color: var(--gold-light); }
+    .hero-content .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,0.7);
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+    .hero-content .hero-tagline {
+      font-size: 1.1rem; color: var(--gold-light);
+      font-style: italic; margin-top: 0.75rem;
+    }
+    .hero-content .hero-divider {
+      width: 60px; height: 3px; background: var(--gold);
+      border-radius: 2px; margin: 1.5rem auto;
+    }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .scroll-down {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,0.6); font-size: 1.6rem; animation: bounce 2s infinite;
+    }
+    .btn {
+      display: inline-block; padding: 0.75rem 2rem;
+      border-radius: 30px; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em;
+      text-transform: uppercase; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+    .btn-gold { background: var(--gold); color: var(--brown-dark); }
+    .btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+    .btn-outline:hover { background: #fff; color: var(--brown-dark); }
+
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 1.5rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.15em; color: var(--terracotta); margin-bottom: 0.5rem;
+    }
+    .section-title { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--brown-dark); }
+    .section-title span { color: var(--gold); }
+    .title-divider {
+      width: 60px; height: 3px; background: var(--gold);
+      border-radius: 2px; margin: 1rem 0 2rem;
+    }
+
+    /* ── MASS TIMINGS ── */
+    #mass { background: var(--brown-dark); }
+    #mass .section-label { color: var(--gold-light); }
+    #mass .section-title { color: #fff; }
+    #mass .title-divider { background: var(--gold-light); }
+
+    .mass-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .mass-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px; padding: 1.75rem; text-align: center;
+    }
+    .mass-card i { font-size: 2rem; color: var(--gold-light); margin-bottom: 0.75rem; }
+    .mass-card h3 { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .mass-card ul { list-style: none; }
+    .mass-card ul li { color: rgba(255,255,255,0.75); padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); font-size: 0.92rem; }
+    .mass-card ul li:last-child { border: none; }
+    .mass-card ul li strong { color: var(--gold-light); }
+
+    /* ── PRAYER ── */
+    #prayer { background: var(--rose); }
+    .prayer-box {
+      background: var(--white); border-radius: 16px;
+      padding: 3rem; box-shadow: 0 4px 24px rgba(92,61,46,0.12);
+      max-width: 780px; margin: 0 auto; text-align: center;
+    }
+    .prayer-box i { font-size: 2.5rem; color: var(--gold); margin-bottom: 1rem; }
+    .prayer-box p { font-size: 1.05rem; color: var(--text-mid); font-style: italic; line-height: 2; }
+
+    /* ── SAINT'S LIFE ── */
+    #saint { background: var(--cream); }
+    .life-chapters { display: flex; flex-direction: column; gap: 2rem; margin-top: 1rem; }
+    .chapter {
+      display: grid; grid-template-columns: auto 1fr; gap: 0 1.5rem;
+      background: #fff; border-radius: 12px; padding: 1.75rem;
+      box-shadow: 0 2px 12px rgba(92,61,46,0.08);
+      align-items: start;
+    }
+    .chapter-icon {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--gold); display: flex; align-items: center; justify-content: center;
+      color: var(--brown-dark); font-size: 1.2rem; flex-shrink: 0; margin-top: 4px;
+    }
+    .chapter h3 { font-size: 1.15rem; color: var(--brown-dark); margin-bottom: 0.5rem; }
+    .chapter p { color: var(--text-mid); font-size: 0.95rem; }
+    .chapter-img { grid-column: 1 / -1; margin-top: 1rem; border-radius: 8px; overflow: hidden; }
+    .chapter-img img { width: 100%; max-height: 280px; object-fit: cover; }
+
+    /* ── HISTORY ── */
+    #history { background: var(--cream-dark); }
+    .history-wrap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    }
+    .history-wrap img { border-radius: 12px; box-shadow: 0 4px 24px rgba(92,61,46,0.18); }
+    .history-text p { color: var(--text-mid); margin-bottom: 1rem; }
+
+    /* ── WARDS ── */
+    #wards { background: var(--cream); }
+    .wards-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem;
+    }
+    .ward-card {
+      background: #fff; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 2px 12px rgba(92,61,46,0.09); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .ward-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(92,61,46,0.16); }
+    .ward-card img { width: 100%; height: 140px; object-fit: cover; }
+    .ward-card-body { padding: 1rem; }
+    .ward-card-body h4 { font-size: 0.88rem; color: var(--brown-dark); line-height: 1.4; }
+
+    /* ── ASSOCIATIONS ── */
+    #associations { background: var(--rose); }
+    .assoc-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 1rem;
+    }
+    .assoc-card {
+      background: #fff; border-radius: 12px; padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(92,61,46,0.08); border-left: 4px solid var(--gold);
+    }
+    .assoc-card i { font-size: 1.8rem; color: var(--terracotta); margin-bottom: 0.75rem; }
+    .assoc-card h3 { font-size: 1rem; color: var(--brown-dark); margin-bottom: 0.5rem; }
+    .assoc-card p { font-size: 0.88rem; color: var(--text-soft); }
+
+    /* ── CHAPLAINS ── */
+    #chaplains { background: var(--cream-dark); }
+    .timeline { position: relative; padding-left: 2rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; background: var(--gold); border-radius: 2px;
+    }
+    .tl-item { position: relative; margin-bottom: 2rem; }
+    .tl-dot {
+      position: absolute; left: -2.55rem; top: 4px;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--gold); border: 3px solid var(--cream-dark);
+      box-shadow: 0 0 0 2px var(--gold);
+    }
+    .tl-card {
+      background: #fff; border-radius: 12px; padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(92,61,46,0.08);
+      display: grid; grid-template-columns: 64px 1fr; gap: 1rem; align-items: start;
+    }
+    .tl-card img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream-dark); }
+    .tl-card h3 { font-size: 1rem; color: var(--brown-dark); margin-bottom: 0.2rem; }
+    .tl-card .years { font-size: 0.78rem; color: var(--gold); font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .tl-card p { font-size: 0.88rem; color: var(--text-soft); }
+
+    /* ── EVENTS ── */
+    #events { background: var(--cream); }
+    .events-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;
+    }
+    .event-card {
+      background: #fff; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 2px 16px rgba(92,61,46,0.1); transition: transform 0.2s;
+    }
+    .event-card:hover { transform: translateY(-4px); }
+    .event-card img { width: 100%; height: 180px; object-fit: cover; }
+    .event-card-body { padding: 1.25rem; }
+    .event-date { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--terracotta); margin-bottom: 0.4rem; }
+    .event-card-body h3 { font-size: 1.1rem; color: var(--brown-dark); margin-bottom: 0.5rem; }
+    .event-card-body p { font-size: 0.88rem; color: var(--text-soft); }
+    .event-meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+    .event-meta span { display: flex; align-items: center; gap: 0.35rem; font-size: 0.82rem; color: var(--text-mid); }
+    .event-meta i { color: var(--gold); }
+
+    /* ── GALLERY ── */
+    /* ── GALLERY LAYOUT (HORIZONTAL) ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images horizontally on desktop */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  position: relative; /* Crucial: Keeps the button inside this box */
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  background: #000;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ── ENLARGE BUTTON (TOP RIGHT) ── */
+.enlarge-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.2); /* Very low opacity white */
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* Make it more visible on hover */
+.gallery-item:hover .enlarge-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+}
+
+/* ── MODAL STYLES (ENLARGED VIEW) ── */
+.gallery-modal {
+  display: none; 
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-modal.show { display: flex; }
+
+.gallery-modal-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  border: 3px solid rgba(255,255,255,0.1);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.gallery-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive: 2 columns on tablets, 1 on mobile */
+@media (max-width: 992px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--cream-dark); }
+    .contact-wrap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;
+    }
+    .contact-info h3 { font-size: 1.2rem; color: var(--brown-dark); margin-bottom: 1.25rem; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem;
+    }
+    .contact-item i { font-size: 1.2rem; color: var(--gold); margin-top: 2px; min-width: 20px; }
+    .contact-item div strong { display: block; color: var(--brown-dark); font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.2rem; }
+    .contact-item div span { color: var(--text-mid); font-size: 0.95rem; }
+    .map-box {
+      background: #fff; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(92,61,46,0.12); aspect-ratio: 4/3;
+    }
+    .map-box iframe { width: 100%; height: 100%; border: none; }
+    .social-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+    .social-btn {
+      width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: #fff; transition: transform 0.2s, opacity 0.2s;
+    }
+    .social-btn:hover { transform: translateY(-3px); opacity: 0.85; }
+    .social-btn.fb { background: #1877f2; }
+    .social-btn.wa { background: #25d366; }
+    .social-btn.yt { background: #ff0000; }
+    .social-btn.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+    /* ── ANNOUNCEMENTS CTA ── */
+    .announce-cta {
+      background: var(--terracotta); text-align: center; padding: 4rem 1.5rem;
+    }
+    .announce-cta h2 { font-family: 'Playfair Display', serif; color: #fff; font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.75rem; }
+    .announce-cta p { color: rgba(255,255,255,0.85); margin-bottom: 1.75rem; font-size: 1rem; }
+    .announce-cta .btn-gold { font-size: 1rem; padding: 0.85rem 2.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark); color: rgba(255,255,255,0.65);
+      padding: 3rem 1.5rem 1.5rem; text-align: center;
+    }
+    footer .footer-brand { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 1.2rem; margin-bottom: 0.5rem; }
+    footer p { font-size: 0.85rem; margin-bottom: 1.5rem; }
+    footer .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; }
+    footer .footer-links a { color: rgba(255,255,255,0.55); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s; }
+    footer .footer-links a:hover { color: var(--gold-light); }
+    footer .copy { font-size: 0.8rem; color: rgba(255,255,255,0.3); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; margin-top: 1rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .history-wrap, .contact-wrap { grid-template-columns: 1fr; }
+      .tl-card { grid-template-columns: 48px 1fr; }
+      .tl-card img { width: 48px; height: 48px; }
+      section { padding: 3.5rem 1rem; }
+    }
+  </style>
 </head>
-
-<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
-
-<body class="theme-invert">
-
-	<div class="sky">
-
-		<div class="moon"></div>
-		<div class="clouds_one"></div>
-		<div class="clouds_two"></div>
-		<div class="clouds_three"></div>
-
-		<div id="header">
-			<div class="thumbnail left-thumbnail">
-				<img src="assets/images/chapel.gif"></img>
-			</div>
-			<div class="banner-block">
-				<div class="thumbnail banner">
-					<img src="assets/images/banner.png"></img>
-				</div>
-			</div>
-			<div class="thumbnail right-thumbnail">
-				<img src="assets/images/rita.png"></img>
-			</div>
-
-
-
-
-			<nav class="mainmenu" id="nav">
-				<div class="responsive-nav-btn">
-					<label for="nav-check">
-						<span><i class="fa fa-bars"></i></span>
-					</label>
-				</div>
-				<ul class="main-menu-items">
-					<li><a href="#head" name="menu-item">Home</a></li>
-					<li>
-						<span>Our Chapel</span>
-						<ul class="sub-main-menu">
-							<li><a href="#saint" name="menu-item">Life of Saint Rita de Cascia</a></li>
-							<li><a href="#history" name="menu-item">History</a></li>
-							<li><a href="#wards" onclick="$('.radiate').radiate('show')" value="Show"
-									name="menu-item">Wards and their chapels</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>Associations</span>
-						<ul class="sub-main-menu">
-							<li><a href="#fabrica" name="menu-item">Fabrica</a></li>
-							<li><a href="#ppc" name="menu-item">Parish Pastoral Council</a></li>
-							<li><a href="#cats" name="menu-item">Catechist</a></li>
-							<li><a href="#youth" name="menu-item">Youth Group</a></li>
-							<li><a href="#choir" name="menu-item">Choir Group</a></li>
-							<li><a href="#altservers" name="menu-item">Alter Servers</a></li>
-							<li><a href="#altladies" name="menu-item">Alter Ladies</a></li>
-							<li><a href="#legion" name="menu-item">Legion of Mary</a></li>
-						</ul>
-					</li>
-					<li><a href="#contact" name="menu-item">Our Chaplians</a></li>
-					<li><a href="#events" name="menu-item">Events</a></li>
-					<li><a href="#gallery" name="menu-item">Gallery</a></li>
-				</ul>
-			</nav>
-
-		</div>
-
-
-		<!-- Main (Home) section -->
-		<section class="section" id="head">
-			<div class="container" style="overflow: auto;">
-
-				<div class="row">
-					<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
-
-						<h4 class="subtitle">Prayer to Saint Rita</h4>
-
-						<p class="home-page">
-							Holy Patroness of those in need, Saint Rita, so humble, pure and patient,
-							whose pleadings with thy Divine Spouse are irresistible, obtain for me from thy
-							Crucified Christ my request (mention it here). Be kind to me, for the greater glory of God,
-							and I promise to honor thee and to sing thy praises forever.
-							<br><br>
-							Oh glorious St. Rita, who didst miraculously participate in the sorrowful
-							Passion of our Lord Jesus Christ, obtain for me the
-							grace to suffer with resignation the troubles of this life, and
-							protect me in all my needs. Amen
-						</p>
-
-
-
-					</div> <!-- /col -->
-
-				</div> <!-- /row -->
-
-			</div>
-		</section>
-		<!-- Second (Patron Saint) section -->
-		<section class="section" id="saint" style="height:50%;position: relative;">
-			<div class="container">
-				<h4>Life of Saint Rita</h4>
-				<div class="4u" id="sidebar">
-					<section>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>EARLY LIFE</h3>
-									<p> Rita was born in the year 1381 in the village of Roccaporena, near Cascia ,
-										Italy .
-										Her parents, Antonio and Amata Lotti, considered her birth a very special gift
-										from God,
-										for Rita was born to them as they were already advancing in age. As a young girl
-										Rita
-										frequently visited the convent of the Augustinian Nuns in Cascia and dreamed of
-										one day
-										joining their community. Her parents, however, had promised her in marriage,
-										according
-										to the custom of the day, to Paolo Mancini, a good man of strong and impetuous
-										character.
-										Rita accepted her parents’ decision, resolved to see this as God’s will for her.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>MARRIED LIFE</h3>
-									<p> The young couple was joined in marriage and soon twin boys were born to them.
-										Rita found herself occupied with the typical concerns of a wife, mother, and
-										homemaker
-										of Roccaporena, while Paolo was employed as a watchman for the town. In Cascia,
-										as elsewhere,
-										a great rivalry existed between two popular political factions, the Guelphs, and
-										the
-										Ghibellines. As a minor official of the town, Paolo often found himself drawn
-										into the
-										conflict, and the strain that this caused probably accounts for the tension,
-										which he
-										sometimes brought into the Mancini household. By her prayer, patience, and
-										affection,
-										however, Rita was able to ease the stress and worry her husband experienced, but
-										she
-										was not able to shield him altogether from the dangers to which society exposed
-										him.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>DEATH OF HUSBAND AND SONS</h3>
-									<p> One day as Paolo was returning home from work he was ambushed and killed.
-										The pain which this unexpected and violent death inflicted upon Rita was only
-										compounded by the fear she felt that her two teenage sons, moved by the
-										unwritten
-										law of the “vendetta,” would seek to avenge their father’s death. Rita’s only
-										recourse was to prayer and persuasion. As it happened, the death of both boys
-										from
-										natural causes a short time later removed them from physical and spiritual
-										danger.
-										Despite her great burden she could still thank God that they had died in peace,
-										free
-										of the poison of murder to which hatred and revenge might have otherwise drawn
-										them.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>PEACEMAKER</h3>
-									<p> Now alone in the world and without family responsibilities,
-										Rita once more turned her thoughts to the desired vocation of her youth,
-										that of joining the Augustinian Nuns of Saint Mary Magdalene Monastery.
-										Some of the religious of the community, however, were relatives of the
-										members of the political faction considered responsible for Paolo’s death,
-										and so as not to tempt the harmony of the convent, Rita’s request for admission
-										was denied. Fortunately, she was not to be easily dissuaded from following what
-										she knew to be God’s plan for her. She implored her three patron saints — John
-										the Baptist,
-										Augustine, and Nicholas of Tolentino to assist her, and she set about the task
-										of
-										establishing peace between the hostile parties of Cascia with such success that
-										her
-										entry into the monastery was assured.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>THE GIFT OF THE THORN</h3>
-									<p><img data-src="assets/images/gift_of_thorn.jpg" class="lazy"></img>
-										At the age of thirty-six Rita pledged to follow the ancient Rule of Saint
-										Augustine. For the next forty years she gave herself wholeheartedly to prayer
-										and works of charity, striving especially to preserve peace and harmony among
-										the citizens of Cascia. With a pure love she wanted more and more to be
-										intimately
-										joined to the redemptive suffering of Jesus, and this desire of hers was
-										satisfied
-										in an extraordinary way. One day when she was about sixty years of age, she was
-										meditating before an image of Christ crucified, as she was long accustomed to
-										doing.
-										Suddenly a small wound appeared on her forehead, as though a thorn from the
-										crown
-										that encircled Christ’s head had loosed itself and penetrated her own flesh. For
-										the
-										next fifteen years she bore this external sign of stigmatization and union with
-										the
-										Lord. In spite of the pain she constantly experienced, she offered herself
-										courageously
-										for the physical and spiritual well being of others. During the last four years
-										of her
-										life Rita was confined to bed and was able to eat so little that she was
-										practically
-										sustained on the Eucharist alone. She was, nevertheless, an inspiration to her
-										sisters
-										in religion and to all who came to visit her, by her patience and joyful
-										disposition despite
-										her great suffering.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>THE ROSE</h3>
-									<p><img data-src="assets/images/rose2.gif" class="lazy"></img>
-										One of those who visited her some few months before her death — a relative from
-										her hometown of Roccaporena — was privileged to witness firsthand the
-										extraordinary
-										things wrought by Rita’s requests. When asked whether she had any special
-										desires,
-										Rita asked only that a rose from the garden of her parents’ home be brought to
-										her.
-										It was a small favor to ask, but quite an impossible one to grant in the month
-										of
-										January! Nevertheless, on returning home the woman discovered, to her amazement,
-										a single brightly-colored blossom on the bush where the nun said it would be.
-										Picking it, she returned immediately to the monastery and presented it to Rita
-										who gave thanks to God for this sign of love. Thus, the saint of the thorn
-										became
-										the saint of the rose, and she whose impossible requests were granted her became
-										the advocate of all those whose own requests seem impossible as well. As she
-										breathed
-										her last, Rita’s final words to the sisters who gathered around her were,
-										“Remain in
-										the holy love of Jesus. Remain in obedience to the holy Roman Church. Remain in
-										peace and fraternal charity.”
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<h3>DEATH</h3>
-									<p><img data-src="assets/images/death.jpg" class="lazy"></img>
-										Having faithfully and lovingly responded to God’s many invitations to her
-										in the course of her seventy-six years, Rita returned to God in peace on May 22,
-										1457. Her body, which has remained incorrupt over the centuries, is venerated
-										today
-										in the shrine of Cascia, which bears her name. Her feast is observed on the
-										anniversary
-										of her death, 22 May.
-										<br><br><br></br>
-									</p>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-			<a href="#" class="scrollup">Scroll</a>
-		</section>
-
-		<!-- Second (History of chapel) section -->
-		<section class="section" id="history">
-			<div class="container">
-				<h4>History of our chapel</h4>
-				<div class="4u" id="sidebar">
-					<section>
-						<div class="col-sm-13 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<p><img data-src="assets/images/history.png" class="lazy"></img>
-										In the year 2015, St. Rita’s Chapel, Carona, Aldona, celebrated its 150 years.
-										But it has been around 250 years since the devotion to St. Rita started in
-										Carona.
-										This devotion was started in Carona by the Vaz Family through their Priest
-										Fr. Damioa Salvador Vaz. From then on, this family came to be known as Santa
-										Rita
-										Vaz.
-										At that moment, in the world the devotion to St. Rita had reached to Africa from
-										Italy.
-										Fr. Damioa Vaz who was working as a missionary in Africa brought the statue of
-										St.
-										Rita to
-										his house on May 16th, 1764. Taking special permission from the Archbishop of
-										Goa (
-										Provisao
-										de 16 de Maio, 1764) he started a small chapel in his house itself which
-										operated
-										for 100
-										years. Later on when the present chapel was built the statue of St. Rita was
-										shifted
-										from
-										Fr. Damioa’s house to the altar of the new chapel, on 28th June 1864.<br><br>
-										The chapel was blessed on June 28th 1864 and a Confraria (Konfrari) in the
-										name of St. Rita was formed. In the whole Archdiocese of Goa, St. Rita has one
-										church and two chapels dedicated to her. <br><br>
-										St. Rita is the Patron Saint of the Impossible. In the Year 1627,
-										she was declared as Blessed Rita and on 24th May 1900 Pope Lio XIII
-										officially canonized Rita as Saint.
-									</p>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-		</section>
-
-
-		<!-- Second (Wards) section -->
-		<section class="section" id="wards">
-			<div class="container">
-				<ul class="radiate">
-					<li>
-						<a href="#" class="wardClick" id="path-ward"><img data-src="assets/images/chapels/panth.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Franciskachem Kopel:Panth</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="pinta-ward"><img data-src="assets/images/chapels/grand.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Khursachem Kopel Kopel:Pintavaddo</h6>
-
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="khursa-ward"><img data-src="assets/images/chapels/khursa.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Sebastian Kopel:Khursavaddo</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="kamti-ward"><img data-src="assets/images/chapels/kamti.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Anachem Kopel:Kamitivaddo</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="pqn-ward"><img data-src="assets/images/chapels/pequeno.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Khursachem Kopel:Pequeno Carona</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="muddo-ward"><img data-src="assets/images/chapels/muddo.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Anachem Kopel:Muddo</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="lakdem-ward"><img data-src="assets/images/chapels/lakdem.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Sebastianvachem Kopel:Lankdem</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="carv-ward"><img data-src="assets/images/chapels/carvalho.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Khuris:Carvalhovaddo</h6>
-					</li>
-					<li>
-						<a href="#" class="wardClick" id="nivim-ward"><img data-src="assets/images/chapels/nivim.png"
-								class="ward-radiant-image lazy"></a>
-						<h6>Sant Sebastianvachem Kopel:Nivim</h6>
-					</li>
-					<li>
-						<div class="wardClick" id="son-ward"><img data-src="assets/images/chapels/sonetem.png"
-								class="ward-radiant-image lazy"></div>
-						<h6>Khuris:Sonetem</h6>
-					</li>
-				</ul>
-
-				<section id="path-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Franciskachem Kopel:Panth</h3>
-								<p><img data-src="assets/images/chapels/panth.png" class="lazy wards-img" />Hem Kopel
-									pantintle
-									Bhavboinechea ekcharacho nomuno. Dez.3rer hea Kopelant vodda dobazean,
-									mis bettounn hem fest somorombhtat. Tech porim Sant Khursachi porob Maiache 3rer
-									ters ani
-									Landin rozar korun somorombhtat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="pinta-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Khursachem Kopel :Grande Carona</h3>
-								<p><img data-src="assets/images/chapels/grand.png" class="lazy wards-img" />Bhou
-									mankullem
-									Kopel hem. Rostear thaun disti poddona khorem, pun tem
-									polletoleank dadoskai bogta.Bhovttoncho vattar bore tore nettoun, hea Kopelache
-									fest Mai mhoinneant somorombhtat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="khursa-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Sebastian Kopel:Khursavaddo</h3>
-								<p><img data-src="assets/images/chapels/khursa.png" class="lazy wards-img" />Hem Kopel
-									banddunk
-									kherit karonn aslem. Sagtat ki thoim laginch eka xettant Bhag.
-									Sebastianvachi murti meulli, Espy Desouza hika. Adin tem Kopel lahn aslem,
-									uprant Inacio Piedade D’Souza e Louzado hannem tem sarke korunk adar dilo.
-									Jannerache 20ver Bhag. Sebastianvache porebe disa, hea Kopelache fest somorombtat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="kamti-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Anachem Kopel:Kamitivaddo</h3>
-								<p><img data-src="assets/images/chapels/kamti.png" class="lazy wards-img" />Hem Kopel
-									1947
-									vorsa Sant Annak bhettoilem. Hanche poili hea vaddeant don kopela bandlollim.
-									Pun lokak tea Kopelani vochunk adkholl zatali dekhun, xekim rosteak lagim Kopel
-									bandunk ieujilem.
-									Hea kopelache fest Juliche 26ver dobachean monnoita.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="pqn-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Khursachem Kopel:Pequeno Carona</h3>
-								<p><img data-src="assets/images/chapels/pequeno.png" class="lazy wards-img" />Hea
-									Kopelache
-									fest, Bhag. Thomasache fest Igorjent somorombtoch, tin disa uprant monoitat,
-									dobajik misantlean. Hem Kopel 2002 vorsa vaddeachea lokanni sagata mellun sarke
-									korun,
-									tachi sobitkai vaddoilea.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="muddo-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Anachem Kopel:Muddo</h3>
-								<p><img data-src="assets/images/chapels/muddo.png" class="lazy wards-img" />Hem Kopel
-									Irmiti
-									mukharuch rostear asa, sagta ki hem Kopel 1865 vorsa bandlam.
-									Juliache 26ver hea kopelachi porob vhodda netan monoitat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="lakdem-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Sebastianvachem Kopel:Lankdem</h3>
-								<p><img data-src="assets/images/chapels/lakdem.png" class="lazy wards-img" />Hem Kopel
-									bandlole
-									1925 vorsa, Pri. Jose Bras da Gama hannem. Hea Kopelant 1940
-									vorsa pasun festa somoiar mis bettoitat. Dor vorsa hem fest 9 disache toiari uprant
-									Janerache 22ver vhodda ghonghonnan somorombtat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="carv-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Khuris:Carvalhovaddo</h3>
-								<p><img data-src="assets/images/chapels/carvalho.png" class="lazy wards-img" />Bhou adlo
-									khuris
-									ho. Maiachea mhonneant tachi porob somorombtat.
-									Tech porim Bhag. Antonichi porob mhonnoitat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="nivim-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Sant Sebastianvachem Kopel:Nivim</h3>
-								<p><img data-src="assets/images/chapels/nivim.png" class="lazy wards-img" />Supurlem
-									Kopel hem,
-									Sant Sebastiavank bettoilolem. Maiache mhoinneant Sant Sebastianvachi porob
-									somorombtat. Adim ladinn korun fest kortale, halimchea kallar, festa dis Mis
-									somorombun
-									hea vaddeant ani Kopelant bhokti ani bhavart somorombtat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section id="son-ward-view">
-					<div class="col-sm-13 col-sm-offset-0">
-						<div class="thumbnail">
-							<div class="caption">
-								<h3>Khuris:Sonetem</h3>
-								<p><img data-src="assets/images/chapels/sonetem.png" class="lazy wards-img" />Maiachea
-									mhoinneant , dobajean , hea vaddeacho lok fest monoitat ani bhavponn somorombtat.
-								</p>
-
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-
-			<a href="#" class="scrollup">Scroll</a>
-		</section>
-
-
-		<!-- Third (Contact) section -->
-		<!-----------------All Associations--------->
-		<!--(Fabrica) section -->
-		<section class="section" id="fabrica">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Fabrica</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>The Fabrica is the administrative body of the Chapel. The members are appointed
-							by the Bishop and have a term of 3 years. They look after the administration of the
-							Chapel (e.g. Finances)</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--(PPC) section -->
-		<section class="section" id="ppc">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Parish Pastoral Council</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>The PPC members are a link between the Church, Chapel and the wards.
-							Each ward is represented by a PPC Member who looks after the various spiritual
-							as well as other activities of the Church.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--(Catechist) section -->
-		<section class="section" id="cats">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<div class="caption">
-						<h3 style="text-align:center;">Catechist</h3>
-						<div class="row half no-collapse">
-							<div class="inner-content">
-								<img data-src="assets/images/cats.png" class="lazy" />
-								<div>
-									<p>
-										Catechetical Association
-										inculcates
-										love of God and man in young
-										minds through catechism classes held every Sunday.
-									</p>
-									<h5>Name of the Catechists</h4>
-									<ul>
-										<li>Animator: Fr. Caitan D'Souza</li>
-										<li>Chris Alvares</li>
-										<li>Desmond Fernandes</li>
-										<li>Fr. Caitan D'Souza</li>
-										<li>Gracy D'souza</li>
-										<li>Isabel Noronha</li>
-										<li>Johnas Pereira</li>
-										<li>Luwella Fernandes E lvares</li>
-										<li>Lyn Marie Fernandes</li>
-										<li>Micha Fernandes</li>
-										<li>Noel Desouza</li>
-										<li>Priyanka Pinto</li>
-										<li>Rhona Fernandes</li>
-										<li>Sr. Lavita Sequeira</li>
-										<li>Supriya Brito</li>
-										<li>Trisha Sequeira</li>
-										<li>Wendy Fernandes</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--(Youth group) section -->
-		<section class="section" id="youth">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Youth group</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>The young brigade of the Chapel. The Youth with their vibrant energy and talents
-							take part and organise different activities and help in different Chapel Functions.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--(Choir group) section -->
-		<section class="section" id="choir">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Choir group</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>Led by Noel D’souza, the choir lends their voices for different masses and lead
-							the people in praising the Lord. Be it the Sunday Mass or a Wedding mass or a Feast Mass,
-							the choir is always well prepared for it through rigorous practices under the guidance of
-							Noel.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--(Alter Servers) section -->
-		<section class="section" id="altservers">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Alter Servers</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>These young boys and girls serve at the Altar assisting the Priest for every
-							Sunday as well as regular Masses. They come for the meetings held on every Saturday
-							with great enthusiasm. Each of them has a desire to serve at the Altar of the Lord.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--(Alter Ladies) section -->
-		<section class="section" id="altladies">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Alter ladies</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>Probably one of its kind in Goa, the Altar Ladies group in the Chapel look after
-							the Altar Linen and other requirements of the Altar. They also see to the serving of
-							refreshments during various occasions.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--(legion of Mary) section -->
-		<section class="section" id="legion">
-			<div class="container" style="overflow:auto;position: relative;">
-				<div class="thumbnail">
-					<h3 style="text-align:center;">Legion of Mary</h3>
-					<div class="row half no-collapse" style="margin:0;">
-						<p>The members of this Devotion are ardent devotees of Mother Mary and through their
-							devotion to Her they pray for the entire community.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Fourth (chaplians) section -->
-		<section class="section" id="contact">
-			<div class="container" style="overflow:auto;">
-
-				<div id="timeline">
-					<ul id="dates">
-						<li><a href="#1921">1921</a></li>
-						<li><a href="#1953">1953</a></li>
-						<li><a href="#1950">1954</a></li>
-						<li><a href="#1954">1954</a></li>
-						<li><a href="#1974">1974</a></li>
-						<li><a href="#1977">1977</a></li>
-						<li><a href="#1984">1984</a></li>
-						<li><a href="#1991">1991</a></li>
-						<li><a href="#1997">1997</a></li>
-						<li><a href="#2002">2002</a></li>
-						<li><a href="#2007">2007</a></li>
-						<li><a href="#2008">2008</a></li>
-						<li><a href="#2010">2010</a></li>
-						<li><a href="#2015">2015</a></li>
-						<li><a href="#2021">2021</a></li>
-					</ul>
-					<ul id="issues">
-						<li id="1921">
-							<img data-src="assets/images/priests/fr_tome.png" class="lazy"></img>
-							<h1>Pri Tome Damiao Cordeiro</h1>
-							<p>1921 vorsa, Carona bhitor sorlo amcho poilo Copelaum ravnnar Caronche irmidin,
-								Pri. Tome Damioa Nicolau Jose Cordeiro zo irmidichi pos gheta 8 ve Agostache 1921 vorsa.
-								To vortovlo ek khoddegantt pregador, sthapnnar eka boreantlea borea ‘Santa Rita’
-								portuguez
-								escolcho ani ghoddnar amche irmidichea orixtt fundacho zachi khobor dixtti poddta ekek
-								marmoriche
-								fatnir ji ghalea sakristiche vonttir irmidichea vosreant.
-								To ektis vorsam amche modem jielo 1921 – 1951.</p>
-						</li>
-
-						<li id="1953">
-							<img data-src="assets/images/priests/priest-icon.png" class="lazy" />
-							<h1>Pri. Caetano D'silva </h1>
-							<p>Amcho durso Chopelaum zaun asa Pri. Caetano D’Silva zo Carona ailo
-								1953 vorsa ani amche modem ravlo fokot dha mhoine.</p>
-						</li>
-
-						<li id="1950">
-							<img data-src="assets/images/priests/priest-icon.png" class="lazy" />
-							<h1>Pri. Roberto Barreto </h1>
-							<p>Amcho tisro Copelaum vortovlo Pri. Roberto Barreto zo ravlo amchem modem fokot char
-								mhoinne.</p>
-						</li>
-
-						<li id="1954">
-							<img data-src="assets/images/priests/fr_nicolau.png" class="lazy" />
-							<h1>Pri. Nicolau Xavier Mendes </h1>
-							<p>Pri. Nicolau Xavier Mendes zo Carona ailo 1954 vorsa, zaun asa amcho chovto Copelaum.
-								To amche modem 1974 voros pasun ravlo. Zaito vavr tannem kelo , odik korun 1964 vorsa
-								jedna
-								ami somrombhli porob amche irmidichea poilea xekddeachi ani tech bhaxen tea uprant
-								jednam
-								ami ubharlem hem novem durig amchea adrachem. </p>
-						</li>
-
-						<li id="1974">
-							<img data-src="assets/images/priests/priest-icon.png" class="lazy" />
-							<h1>Pri. Wilson Almeida</h1>
-							<p>Amcho panchvo Copelaum vortovlo Pri. Wilson Almeida zo amche modem ravlo 1974 tem 1977
-								voros passun.</p>
-						</li>
-
-						<li id="1977">
-							<img data-src="assets/images/priests/fr_angnelo.png" class="lazy" />
-							<h1>Pri. Agnelo Mendes</h1>
-							<p>Tache patlean ailo amcho sovo Copelaum, Pri. Agnelo Mendes 1977 tem 1983 voros passun.
-								Hem dogui Capelaum zaite vavurleat boreponnan passun amche irmidichea ani tech bhaxen
-								amchea vaddeachea.</p>
-						</li>
-
-						<li id="1984">
-							<img data-src="assets/images/priests/fr_carlos.png" class="lazy" />
-							<h1>Fr Carlos Mendes</h1>
-							<p>Pri. Carlos Mendes zaun asa amcho satvo Copelaum. To vortovlo ek boreantlo boro gaupi ani
-								vazoupi.
-								Carona tannem zaitem sudarop kelem ani amche irmidichi 125 vorsa to korunk pavlo. Tachea
-								adharan Carona
-								‘St. Rita’ Shopping Complex toira zaunk pavlem. To amche modem 1984 tem 1991 vavurlo.
-							</p>
-						</li>
-						<li id="1991">
-							<img data-src="assets/images/priests/fr_zeferino.png" class="lazy" />
-							<h1>Fr Zeferino D'souza</h1>
-							<p>Pri. Zeferino Dsouza amcho atvo Copelaum. Jezuche ollkicho vavr tannem fuddem velo.
-								Tachea fuddariponna khal irmidiche residence proton bandun kadle. To amche modem 1991
-								tem 1996 vorsam aslo</p>
-						</li>
-						<li id="1997">
-							<img data-src="assets/images/priests/fr_jaime.png" class="lazy" />
-							<h1>Pri Jaime Couto</h1>
-							<p>Amcho novo Copelaum, Pri. Jaime Couto. Tannem chodd- so xallent vavr kelolo. Carona tache
-								Gonvllik vavracho poilo onnbhov.
-								Caronnche dor eke family mahiti, tache vadd dis adi ekttaim korun ‘Family Cards’ toiar
-								kelint. To amche modem sov vorsa
-								ravlo, 1996-2002.</p>
-						</li>
-						<li id="2002">
-							<img data-src="assets/images/priests/fr_mathew.png" class="lazy" />
-							<h1>Fr Mateus Rodrigues</h1>
-							<p>Pri. Mattew Rodrigues, boro gaupi ani musician amcho dhavo Copelaum zalo. Tannem amkam
-								novem St. Ritache gaoin goddun
-								dilem. To soglleancho mogacho, bhou korun burgeam ani tornatteacho. Dor skokallim Bhou
-								Povitr Sacramentacho nomoskar
-								tannenuch suru kelo. To amche modem 2002- 2007 vorsa varvurlo.</p>
-						</li>
-						<li id="2007">
-							<img data-src="assets/images/priests/fr_oliver.png" class="lazy" />
-							<h1>Fr Antonio Oliveir</h1>
-							<p>Amcho ikravo Copelaum, Pri. Antonio Oliveira. Agartala ganvant missanvacho vavr kelea
-								uprant tachi nemnnuk
-								amchea gavant zali. Taka ami mogan AOB mhonntalint (Antonio Olieveira Boro). Missavachea
-								ganvantle aple onnbhov
-								tornnatteam borobor vanttalo. To amche modem fokot ekuch voros vavurlo, 2007-2008.</p>
-						</li>
-						<li id="2008">
-							<img data-src="assets/images/priests/fr_vanacio.png" class="lazy" />
-							<h1>Fr Venancio Fonseca</h1>
-							<p>Dr (Fr) Venancio Fonseca don vorsam amchea Kopelant Copelaum koso vavurlo. Ogeponnan vavr
-								korpi ani thoddeach
-								utrancho monis to, pun khupuch zannvaein borololo. Tannem aple unchle xikop kele ani
-								Ph.D podvi
-								zoddlea.</p>
-						</li>
-						<li id="2010">
-							<img data-src="assets/images/priests/priest-icon.png" class="lazy" />
-							<h1>Fr Joaquim Fernandes</h1>
-							<p>Amcho teravo ani atam aso toh copelaum Pri Joaquim Fernandes amchea gavant 2010 vorsa
-								bhitor sorlo. Tache bhag voddlem kiteak taka
-								amche irmidichi 150 vorsa monnopachi sondi mellim. Zaite koxtt toh amchem irmidi pasun
-								gheta,ani zaite udorgot tannem keleam
-								irmidichea saidic bore garden ani bhurgeak kellunk ek dhaktoso park kellam.Devacho mog
-								caronche povitr sobhea kallzani vadounk toh khub thokos gheta </p>
-						</li>
-						<li id="2015">
-							<img data-src="assets/images/priests/fr_mariano.png" class="lazy" />
-							<h1>Fr Mariano Menezes</h1>
-							<p>Amcho chovdavo copelaum Pri Mariano Menezes amchea gavant 2015 vorsa
-								bhitor sorlo. </p>
-						</li>
-						<li id="2021">
-							<img data-src="assets/images/priests/fr_caetano.png" class="lazy" />
-							<h1>Fr Caitan D'souza</h1>
-							<p>Amcho pondravo copelaum Pri Caitan D'souza. Toh Talegoache irgojent Pad Kur Koso poilo
-								aslo ani amchea gavant 2021 vorsa
-								bhitor sorlo. Tache voir todi shi mahiti mhonnlear taka pustoka vachpak ani samazo modem
-								ravun vavr korunk ahvodta. Tache ordination 2008 zalem and tannem aplea ordinationach
-								vixio "Jezu Sarko Govli Porje Sevek Raji" ghetlolo. </p>
-						</li>
-					</ul>
-					<div id="grad_left"></div>
-					<div id="grad_right"></div>
-					<a href="#" id="next">+</a>
-					<a href="#" id="prev">-</a>
-				</div>
-
-
-			</div>
-		</section>
-
-		<!-- Fifth (events) section -->
-		<section class="section" id="events">
-			<div class="container">
-				<h4>Events</h4>
-				<div class="4u" id="sidebar">
-					<section>
-						<div class="col-sm-12 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<img data-src="assets/images/events/soviener.png" class="lazy"></img>
-									<h5>Releasing of the Bhagevont Ritacho Pormoll</h5>
-									<p> The soveiner was released through the hands of Bishop Allwyn Barreto on the
-										occasion of 150 years of St Rita Chapel Carona</p>
-									<br>
-									<p>Date:22/05/2014</p>
-									<br>
-									<br>
-								</div>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<div class="col-sm-12 col-sm-offset-0">
-							<div class="thumbnail">
-								<div class="caption">
-									<img data-src="assets/images/events/poster.jpg" class="lazy"></img>
-									<h5>Tiatr</h5>
-									<p>Name:Char dis sonvsarantle</p>
-									<p>Timings:7.00pm</p>
-									<p>Vanue:Irmitichea Adrar</p>
-									<p>Tickets:100 Rs</p>
-
-
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-		</section>
-
-		<!-- Sixth (Gallery) section -->
-		<section class="section" id="gallery">
-			<div class="container">
-
-				<div class="galleryWrapper">
-					<!-- Slideshow 3 -->
-					<ul class="rslides" id="slider3">
-
-						<li><img data-src="assets/images/gallery/1.png" alt="" class="lazy"></li>
-						<li><img data-src="assets/images/gallery/2.png" alt="" class="lazy"></li>
-						<li><img data-src="assets/images/gallery/3.png" alt="" class="lazy"></li>
-						<li><img data-src="assets/images/gallery/4.png" alt="" class="lazy"></li>
-					</ul>
-
-					<!-- Slideshow 3 Pager -->
-					<ul id="slider3-pager" style="margin:10px 0 0 0;">
-						<li><a href="#"><img data-src="assets/images/gallery/1.png" alt="" class="lazy"
-									style="width:35%;"></a></li>
-						<li><a href="#"><img data-src="assets/images/gallery/2.jpg" alt="" class="lazy"
-									style="width:35%;"></a></li>
-						<li><a href="#"><img data-src="assets/images/gallery/3.png" alt="" class="lazy"
-									style="width:35%;"></a></li>
-						<li><a href="#"><img data-src="assets/images/gallery/4.png" alt="" class="lazy"
-									style="width:35%;"></a></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<div class="doc-block">
-			<div class="closeBtn btn1">
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</div>
-			<div class="modal-content-screen">
-				<img data-src="assets/images/info/chapel-program-30-10-22.png" id="chapel-weekly-program"
-				alt="chapel program" class="responsive lazy">
-			<img data-src="assets/images/info/church-program-23-10-22.png" id="church-weekly-program"
-				alt="chapel program" class="responsive lazy"> 
-			</div>
-				
-		</div>
-		<!-- <div class="doc-block">
-			<div class="closeBtn btn1">
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</div> -->
-			<!-- <img data-src="assets/images/info/church-program-07-08-22.png" id="church-weekly-program"
-				alt="chapel program" class="responsive lazy"> -->
-		<!-- </div> -->
-		
-
-		<!-- <div class="doc-block2">
-			<div class="closeBtn btn2">
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</div>
-			
-			<img src="assets/images/info/chapel-program-15-5-22-2.jpeg" alt="feast program" class="responsive">
-			<img src="assets/images/info/chapel-program-15-5-22-2.jpeg" alt="chapel program" class="responsive">
-		</div> -->
-
-		<div class="doc-block3">
-			<div class="closeBtn btn3">
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</div>
-			<!-- Container for the image gallery -->
-			<div class="image-container">
-
-				<!-- Full-width images with number text -->
-				<div class="mySlides">
-					<div class="numbertext">1 / 11</div>
-					<img data-src="assets/images/gallery/1.png" class="responsive lazy">
-				</div>
-				<div class="mySlides">
-					<div class="numbertext">2 / 11</div>
-					<img data-src="assets/images/gallery/2.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">3 / 11</div>
-					<img data-src="assets/images/gallery/3.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">4 / 11</div>
-					<img data-src="assets/images/gallery/4.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">5 / 11</div>
-					<img data-src="assets/images/gallery/5.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">6 / 11</div>
-					<img data-src="assets/images/gallery/6.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">7 / 11</div>
-					<img data-src="assets/images/gallery/7.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">8 / 11</div>
-					<img data-src="assets/images/gallery/8.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">9 / 11</div>
-					<img data-src="assets/images/gallery/9.png" class="responsive lazy">
-				</div>
-
-				<div class="mySlides">
-					<div class="numbertext">10 / 11</div>
-					<img data-src="assets/images/gallery/10.png" class="responsive lazy">
-				</div>
-				<div class="mySlides">
-					<div class="numbertext">11 / 11</div>
-					<img data-src="assets/images/gallery/11.png" class="responsive lazy">
-				</div>
-
-				<!-- Next and previous buttons -->
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-				<!-- Image text -->
-				<div class="caption-container">
-					<p id="caption"></p>
-				</div>
-
-				<!-- Thumbnail images -->
-				<div class="row">
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/1.png" style="width:100%"
-							onclick="currentSlide(1)" alt="Blessing of St.Rita's Flag(Madi)">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/2.png" style="width:100%"
-							onclick="currentSlide(2)" alt="Chapel's inner view with the chandelier(Old picture)">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/3.png" style="width:100%"
-							onclick="currentSlide(3)" alt="Chapel's garden front view(Old picture)">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/4.png" style="width:100%"
-							onclick="currentSlide(4)" alt="Chapel's garden view(Old picture)">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/5.png" style="width:100%"
-							onclick="currentSlide(5)" alt="Chapel's new garden view">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/6.png" style="width:100%"
-							onclick="currentSlide(6)" alt="Holy family in the new garden">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/7.png" style="width:100%"
-							onclick="currentSlide(7)" alt="Swing in the Chapel garden">
-					</div>
-
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/8.png" style="width:100%"
-							onclick="currentSlide(8)" alt="Our Lady grotto">
-					</div>
-
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/9.png" style="width:100%"
-							onclick="currentSlide(9)" alt="Chapel garden">
-					</div>
-
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/10.png" style="width:100%"
-							onclick="currentSlide(10)" alt="White house">
-					</div>
-					<div class="column">
-						<img class="demo cursor lazy" data-src="assets/images/gallery/11.png" style="width:100%"
-							onclick="currentSlide(1)" alt="White house">
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Floating Button-->
-		<div class="mainopShadow"></div>
-		<div class="fab">
-			<div class="mainop">
-				<i class="fa fa-plus" aria-hidden="true"></i>
-			</div>
-			<!-- <div id="docs2" class="minifab op1">
-				Weekly Church Program
-			</div> -->
-			<div id="docs1" class="minifab op2">
-				Weekly Chapel Program
-			</div>
-			<!-- <div id="docs2" class="minifab op1">
-				Weekly Chapel Program
-			</div> -->
-			<div id="docs3" class="minifab op3">
-				Gallery
-			</div>
-		</div>
-	</div>
-
-
-	<!-- Load js libs only when the page is loaded. -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/config.js"></script>
-	<script src="assets/js/scrollup.js"></script>
-	<script src="assets/js/jquery.timelinr-0.9.54.js"></script>
-	<script src="assets/js/jquery.circular.radiate.js"></script>
-	<script src="assets/js/responsiveslides.min.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/gallery.js"></script>
-	<script>
-		$(function () {
-			$().timelinr({
-				arrowKeys: 'true'
-			});
-
-			// Slideshow 3
-			$("#slider3").responsiveSlides({
-				manualControls: '#slider3-pager',
-				maxwidth: 540
-			});
-		});
-	</script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/modernizr.custom.72241.js"></script>
-	<!-- Custom template scripts -->
-
-	<script src="assets/js/magister.js"></script>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-brand">
+    <img src="https://stritachapelcarona.in/assets/images/rita.png" alt="St Rita" />
+    <span>St Rita's Chapel<br/>Carona</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#mass">Mass Timings</a></li>
+    <li><a href="#saint">Our Saint</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#associations">Associations</a></li>
+    <li><a href="#chaplains">Chaplains</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li class="announce-btn"><a href="announcements.html">📋 Announcements</a></li>
+  </ul>
+  <div class="hamburger" id="ham" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#mass" onclick="closeMenu()">Mass Timings</a>
+  <a href="#saint" onclick="closeMenu()">Our Saint</a>
+  <a href="#history" onclick="closeMenu()">History</a>
+  <a href="#associations" onclick="closeMenu()">Associations</a>
+  <a href="#chaplains" onclick="closeMenu()">Chaplains</a>
+  <a href="#events" onclick="closeMenu()">Events</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="announcements.html">📋 Announcements</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1>St Rita's <span>Chapel</span></h1>
+    <div class="hero-sub">Carona &nbsp;·&nbsp; Aldona &nbsp;·&nbsp; Goa</div>
+    <p class="hero-tagline">"Patron Saint of the Impossible"</p>
+    <div class="hero-divider"></div>
+    <div class="hero-buttons">
+      <a href="#mass" class="btn btn-gold">Mass Timings</a>
+      <a href="announcements.html" class="btn btn-outline">Announcements</a>
+    </div>
+  </div>
+  <a href="#mass" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<!-- ═══ MASS TIMINGS ═══ -->
+<section id="mass">
+  <div class="section-inner">
+    <span class="section-label">Come & Worship</span>
+    <h2 class="section-title">Mass <span>Timings</span></h2>
+    <div class="title-divider"></div>
+    <div class="mass-grid">
+      <div class="mass-card">
+        <i class="fa-solid fa-sun"></i>
+        <h3>Sunday Mass</h3>
+        <ul>
+          <li><strong>8:00 AM</strong> – Konkani Mass</li>
+          <li><strong>10:00 AM</strong> – English Mass</li>
+        </ul>
+      </div>
+      <div class="mass-card">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>Weekday Mass</h3>
+        <ul>
+          <li><strong>Mon – Sat</strong></li>
+          <li><strong>7:00 AM</strong> – Morning Mass</li>
+        </ul>
+      </div>
+      <div class="mass-card">
+        <i class="fa-solid fa-star"></i>
+        <h3>Feast of St Rita</h3>
+        <ul>
+          <li><strong>22nd May</strong></li>
+          <li>Special Novena & Solemn Mass</li>
+          <li>Procession in the evening</li>
+        </ul>
+      </div>
+      <div class="mass-card">
+        <i class="fa-solid fa-hands-praying"></i>
+        <h3>Confession</h3>
+        <ul>
+          <li><strong>Saturday</strong></li>
+          <li><strong>6:00 PM – 7:00 PM</strong></li>
+          <li>Or by appointment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRAYER ═══ -->
+<section id="prayer" style="padding: 4rem 1.5rem;">
+  <div class="prayer-box">
+    <i class="fa-solid fa-cross"></i>
+    <h2 style="font-family:'Playfair Display',serif; color:var(--brown-dark); margin-bottom:1.25rem;">Prayer to Saint Rita</h2>
+    <p>
+      Holy Patroness of those in need, Saint Rita, so humble, pure and patient,
+      whose pleadings with thy Divine Spouse are irresistible, obtain for me from thy
+      Crucified Christ my request. Be kind to me, for the greater glory of God,
+      and I promise to honor thee and to sing thy praises forever.<br/><br/>
+      Oh glorious St. Rita, who didst miraculously participate in the sorrowful
+      Passion of our Lord Jesus Christ, obtain for me the grace to suffer with resignation
+      the troubles of this life, and protect me in all my needs. <strong>Amen.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ═══ LIFE OF SAINT RITA ═══ -->
+<section id="saint">
+  <div class="section-inner">
+    <span class="section-label">About Our Patron</span>
+    <h2 class="section-title">Life of <span>Saint Rita</span></h2>
+    <div class="title-divider"></div>
+    <div class="life-chapters">
+
+      <div class="chapter">
+        <div class="chapter-icon"><i class="fa-solid fa-seedling"></i></div>
+        <div>
+          <h3>Early Life</h3>
+          <p>Rita was born in 1381 in the village of Roccaporena, near Cascia, Italy. Her parents, Antonio and Amata Lotti, considered her birth a very special gift from God. As a young girl Rita frequently visited the convent of the Augustinian Nuns in Cascia and dreamed of joining their community.</p>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-icon"><i class="fa-solid fa-heart"></i></div>
+        <div>
+          <h3>Married Life</h3>
+          <p>Rita was promised in marriage to Paolo Mancini. The young couple were joined in marriage and soon twin boys were born to them. By her prayer, patience and affection, Rita was able to ease the stress and worry her husband experienced.</p>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-icon"><i class="fa-solid fa-dove"></i></div>
+        <div>
+          <h3>Death of Husband & Sons</h3>
+          <p>One day as Paolo was returning home he was ambushed and killed. Rita's two sons also passed from natural causes a short time later. Despite her great burden, she could still thank God that they had died in peace, free of the poison of hatred and revenge.</p>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-icon"><i class="fa-solid fa-church"></i></div>
+        <div>
+          <h3>Peacemaker & Nun</h3>
+          <p>Now alone, Rita implored her three patron saints — John the Baptist, Augustine, and Nicholas of Tolentino — to assist her, and set about establishing peace between the hostile parties of Cascia. At thirty-six, she pledged to follow the ancient Rule of Saint Augustine.</p>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-icon"><i class="fa-solid fa-crown-of-thorns"></i></div>
+        <div>
+          <h3>The Gift of the Thorn</h3>
+          <p>One day, while meditating before an image of Christ crucified, a small wound appeared on her forehead — as though a thorn from the crown of Christ had penetrated her flesh. For the next fifteen years she bore this sign of union with the Lord.</p>
+          <div class="chapter-img"><img src="https://stritachapelcarona.in/assets/images/gift_of_thorn.jpg" alt="Gift of the Thorn" /></div>
+        </div>
+      </div>
+
+      <div class="chapter">
+        <div class="chapter-icon"><i class="fa-solid fa-rose"></i></div>
+        <div>
+          <h3>The Rose & Her Death</h3>
+          <p>Months before her death, Rita asked a relative for a rose from her parents' garden — in January! The woman found a single blossom, to her amazement. Rita passed peacefully on <strong>22 May 1457</strong>. Her body, which has remained incorrupt over the centuries, is venerated today in the shrine of Cascia.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HISTORY ═══ -->
+<section id="history">
+  <div class="section-inner">
+    <span class="section-label">Our Roots</span>
+    <h2 class="section-title">History of <span>Our Chapel</span></h2>
+    <div class="title-divider"></div>
+    <div class="history-wrap">
+      <img src="https://stritachapelcarona.in/assets/images/history.png" alt="History" />
+      <div class="history-text">
+        <p>This year St. Rita's Chapel, Carona, Aldona, celebrates its <strong>150 years</strong>. But it has been around 250 years since the devotion to St. Rita started in Carona — begun by the Vaz Family through their priest Fr. Damioa Salvador Vaz.</p>
+        <p>Fr. Damioa Vaz, working as a missionary in Africa, brought the statue of St. Rita to his house on <strong>May 16th, 1764</strong>. Taking special permission from the Archbishop of Goa, he started a small chapel in his house which operated for 100 years.</p>
+        <p>The present chapel was blessed on <strong>June 28th, 1864</strong> and a Confraria (Konfrari) in the name of St. Rita was formed. In the whole Archdiocese of Goa, St. Rita has one church and two chapels dedicated to her.</p>
+        <p>St. Rita is the <em>Patron Saint of the Impossible</em>. She was declared Blessed in 1627 and canonized as Saint by Pope Leo XIII on <strong>24th May 1900</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WARDS ═══ -->
+<section id="wards" style="background: var(--cream);">
+  <div class="section-inner">
+    <span class="section-label">Our Community</span>
+    <h2 class="section-title">Wards &amp; <span>Their Chapels</span></h2>
+    <div class="title-divider"></div>
+    <div class="wards-grid">
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/panth.png" alt="Panth" />
+        <div class="ward-card-body"><h4>Sant Franciskachem Kopel — Panth</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/grand.png" alt="Grande" />
+        <div class="ward-card-body"><h4>Sant Khursachem Kopel — Pintavaddo</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/khursa.png" alt="Khursavaddo" />
+        <div class="ward-card-body"><h4>Sant Sebastian Kopel — Khursavaddo</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/kamti.png" alt="Kamitivaddo" />
+        <div class="ward-card-body"><h4>Sant Anachem Kopel — Kamitivaddo</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/pequeno.png" alt="Pequeno" />
+        <div class="ward-card-body"><h4>Sant Khursachem Kopel — Pequeno Carona</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/muddo.png" alt="Muddo" />
+        <div class="ward-card-body"><h4>Sant Anachem Kopel — Muddo</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/lakdem.png" alt="Lankdem" />
+        <div class="ward-card-body"><h4>Sant Sebastianvachem Kopel — Lankdem</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/carvalho.png" alt="Carvalhovaddo" />
+        <div class="ward-card-body"><h4>Khuris — Carvalhovaddo</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/nivim.png" alt="Nivim" />
+        <div class="ward-card-body"><h4>Sant Sebastianvachem Kopel — Nivim</h4></div>
+      </div>
+      <div class="ward-card">
+        <img src="https://stritachapelcarona.in/assets/images/chapels/sonetem.png" alt="Sonetem" />
+        <div class="ward-card-body"><h4>Khuris — Sonetem</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ASSOCIATIONS ═══ -->
+<section id="associations">
+  <div class="section-inner">
+    <span class="section-label">Together in Faith</span>
+    <h2 class="section-title">Our <span>Associations</span></h2>
+    <div class="title-divider"></div>
+    <div class="assoc-grid">
+      <div class="assoc-card">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h3>Fabrica</h3>
+        <p>The administrative body of the Chapel, appointed by the Bishop for a 3-year term. Looks after finances and administration.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Parish Pastoral Council</h3>
+        <p>A link between the Church, Chapel and the wards. Each ward is represented by a PPC Member who looks after spiritual and other activities.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Catechist</h3>
+        <p>Inculcates love of God and man in young minds through catechism classes held every Sunday.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Youth Group</h3>
+        <p>The young brigade of the Chapel. They organise different activities and help in various Chapel functions with vibrant energy and talent.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-music"></i>
+        <h3>Choir Group</h3>
+        <p>Led by Noel D'Souza, the choir lends their voices for Sunday, Wedding and Feast Masses through rigorous practice.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-hands-holding"></i>
+        <h3>Altar Servers</h3>
+        <p>Young boys and girls who serve at the Altar assisting the Priest for every Sunday and regular Mass, meeting each Saturday.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-star-of-life"></i>
+        <h3>Altar Ladies</h3>
+        <p>Probably one of its kind in Goa — they look after the Altar Linen and serve refreshments during various occasions.</p>
+      </div>
+      <div class="assoc-card">
+        <i class="fa-solid fa-person-praying"></i>
+        <h3>Legion of Mary</h3>
+        <p>Ardent devotees of Mother Mary who pray for the entire community through their devotion to Her.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CHAPLAINS ═══ -->
+<section id="chaplains">
+  <div class="section-inner">
+    <span class="section-label">Our Shepherds</span>
+    <h2 class="section-title">Our <span>Chaplains</span></h2>
+    <div class="title-divider"></div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_tome.png" alt="Fr Tome" />
+          <div>
+            <div class="years">1921 – 1951</div>
+            <h3>Fr. Tome Damiao Cordeiro</h3>
+            <p>Our first Chaplain, renowned preacher and founder of the 'Santa Rita' Portuguese school. He lived among us for 31 years.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Caetano" />
+          <div>
+            <div class="years">1953</div>
+            <h3>Fr. Caetano D'Silva</h3>
+            <p>Our second Chaplain, who served for ten months.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Roberto" />
+          <div>
+            <div class="years">1953 – 1954</div>
+            <h3>Fr. Roberto Barreto</h3>
+            <p>Our third Chaplain, who served for four months.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_nicolau.png" alt="Fr Nicolau" />
+          <div>
+            <div class="years">1954 – 1974</div>
+            <h3>Fr. Nicolau Xavier Mendes</h3>
+            <p>Our fourth Chaplain, who served 20 years. He celebrated the chapel's centenary in 1964 and oversaw the construction of the new shrine.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Wilson" />
+          <div>
+            <div class="years">1974 – 1977</div>
+            <h3>Fr. Wilson Almeida</h3>
+            <p>Our fifth Chaplain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_angnelo.png" alt="Fr Agnelo" />
+          <div>
+            <div class="years">1977 – 1983</div>
+            <h3>Fr. Agnelo Mendes</h3>
+            <p>Our sixth Chaplain, who worked diligently for the chapel and the wards.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_carlos.png" alt="Fr Carlos" />
+          <div>
+            <div class="years">1984 – 1991</div>
+            <h3>Fr. Carlos Mendes</h3>
+            <p>Our seventh Chaplain — an excellent singer and musician. He oversaw the chapel's 125th anniversary and the development of the St Rita Shopping Complex.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_zeferino.png" alt="Fr Zeferino" />
+          <div>
+            <div class="years">1991 – 1996</div>
+            <h3>Fr. Zeferino D'Souza</h3>
+            <p>Our eighth Chaplain, who advanced the work of Jesus' recognition. Under his leadership the chapel residence was constructed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_jaime.png" alt="Fr Jaime" />
+          <div>
+            <div class="years">1996 – 2002</div>
+            <h3>Fr. Jaime Couto</h3>
+            <p>Our ninth Chaplain, known for his excellent school work and pastoral care. He created 'Family Cards' bringing every family together.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_mathew.png" alt="Fr Mateus" />
+          <div>
+            <div class="years">2002 – 2007</div>
+            <h3>Fr. Mateus Rodrigues</h3>
+            <p>Our tenth Chaplain — a wonderful singer and musician who gifted us the new St Rita song. He introduced the daily Blessed Sacrament adoration.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_oliver.png" alt="Fr Antonio" />
+          <div>
+            <div class="years">2007 – 2008</div>
+            <h3>Fr. Antonio Oliveira</h3>
+            <p>Our eleventh Chaplain — fondly called 'AOB' (Antonio Oliveira Boro). He shared his missionary experiences with the youth.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_vanacio.png" alt="Fr Venancio" />
+          <div>
+            <div class="years">2008 – 2010</div>
+            <h3>Fr. Venancio Fonseca</h3>
+            <p>Our twelfth Chaplain — a man of few words but great learning. He holds a Ph.D. and served with quiet dedication.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Joaquim" />
+          <div>
+            <div class="years">2010 – Present</div>
+            <h3>Fr. Joaquim Fernandes <span style="font-size:0.75rem; background:var(--gold); color:var(--brown-dark); border-radius:20px; padding:2px 10px; font-family:'Lato',sans-serif; font-weight:700; vertical-align:middle;">Current</span></h3>
+            <p>Our thirteenth Chaplain, blessed to lead the chapel's 150th anniversary. He has built a beautiful garden, a children's park, and works tirelessly to grow God's love in Carona.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EVENTS ═══ -->
+<section id="events">
+  <div class="section-inner">
+    <span class="section-label">What's On</span>
+    <h2 class="section-title">Upcoming <span>Events</span></h2>
+    <div class="title-divider"></div>
+    <div class="events-grid">
+
+      <div class="event-card">
+        <img src="https://stritachapelcarona.in/assets/images/events/soviener.png" alt="Souvenir" />
+        <div class="event-card-body">
+          <div class="event-date">22 May 2014</div>
+          <h3>Releasing of the Bhagevont Ritacho Pormoll</h3>
+          <p>The souvenir was released through the hands of Bishop Allwyn Barreto on the occasion of 150 years of St Rita Chapel Carona.</p>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://stritachapelcarona.in/assets/images/events/poster.jpg" alt="Tiatr" />
+        <div class="event-card-body">
+          <div class="event-date">Upcoming</div>
+          <h3>Tiatr — Char Dis Sonvsarantle</h3>
+          <p>An entertaining Konkani Tiatr for the whole community.</p>
+          <div class="event-meta">
+            <span><i class="fa-solid fa-clock"></i> 7:00 PM</span>
+            <span><i class="fa-solid fa-location-dot"></i> Irmitichea Adrar</span>
+            <span><i class="fa-solid fa-ticket"></i> ₹100</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card" style="background: linear-gradient(135deg, var(--cream) 0%, var(--rose) 100%);">
+        <div style="height:180px; display:flex; align-items:center; justify-content:center; font-size:4rem; color:var(--gold);">
+          <i class="fa-solid fa-calendar-star"></i>
+        </div>
+        <div class="event-card-body">
+          <div class="event-date">22 May — Every Year</div>
+          <h3>Feast of St Rita de Cascia</h3>
+          <p>Our most celebrated feast — Novena, Solemn Mass, Procession and community gathering. All are welcome!</p>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="announcements.html" class="btn btn-gold">See All Announcements &amp; Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY ═══ -->
+<!-- ═══ GALLERY SECTION ═══ -->
+<!-- ═══ GALLERY SECTION ═══ -->
+<section id="gallery">
+  <div class="section-inner">
+    <span class="section-label">Memories</span>
+    <h2 class="section-title">Our <span>Gallery</span></h2>
+    <div class="title-divider"></div>
+    
+    <div class="gallery-slider-container">
+      <!-- Slider Navigation Buttons (Visible only if > 4 images) -->
+      <button class="slider-nav prev" id="sliderPrev" onclick="moveSlider(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="gallery-slider-wrapper">
+        <div class="gallery-grid" id="galleryTrack">
+          <!-- Item 0 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 1">
+            <button class="enlarge-btn" onclick="openGallery(0)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- Item 1 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/2.png" alt="Gallery 2">
+            <button class="enlarge-btn" onclick="openGallery(1)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- Item 2 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 3">
+            <button class="enlarge-btn" onclick="openGallery(2)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- Item 3 -->
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 4">
+            <button class="enlarge-btn" onclick="openGallery(3)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <!-- FUTURE IMAGES ADDED HERE WILL AUTOMATICALLY WORK -->
+        </div>
+      </div>
+
+      <button class="slider-nav next" id="sliderNext" onclick="moveSlider(1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- ═══ GALLERY MODAL HTML ═══ -->
+<div id="galleryModal" class="gallery-modal">
+  <span class="gallery-close" onclick="closeGallery()"><i class="fa-solid fa-xmark"></i></span>
+  
+  <!-- Left Arrow -->
+  <button id="prevBtn" class="nav-arrow left" onclick="changeImage(-1)">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+
+  <img class="gallery-modal-content" id="modalImg" alt="Expanded View">
+
+  <!-- Right Arrow -->
+  <button id="nextBtn" class="nav-arrow right" onclick="changeImage(1)">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
+
+<!-- ═══ ANNOUNCEMENTS CTA ═══ -->
+<div class="announce-cta">
+  <h2>Stay Connected with the Community</h2>
+  <p>Read the latest notices, upcoming events and important announcements — and share them with your family and friends.</p>
+  <a href="announcements.html" class="btn btn-gold">View Notice Board</a>
+</div>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-label">Find Us</span>
+    <h2 class="section-title">Get in <span>Touch</span></h2>
+    <div class="title-divider"></div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>St Rita's Chapel, Carona</h3>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Address</strong>
+            <span>St Rita's Chapel, Carona, Aldona,<br/>North Goa — 403 508</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-person-praying"></i>
+          <div>
+            <strong>Current Chaplain</strong>
+            <span>Fr. Joaquim Fernandes</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-globe"></i>
+          <div>
+            <strong>Website</strong>
+            <span><a href="https://stritachapelcarona.in" style="color:var(--gold);">stritachapelcarona.in</a></span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <span>info@stritachapelcarona.in</span>
+          </div>
+        </div>
+        <div class="social-row">
+          <a class="social-btn fb" href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-btn wa" href="https://wa.me/" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="social-btn yt" href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="map-box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.2!2d73.9!3d15.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSt+Rita%27s+Chapel+Carona+Aldona+Goa!5e0!3m2!1sen!2sin!4v1"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="St Rita's Chapel location">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-brand">St Rita's Chapel — Carona</div>
+  <p>Carona · Aldona · North Goa · India</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#mass">Mass Timings</a>
+    <a href="#saint">Our Saint</a>
+    <a href="#history">History</a>
+    <a href="#associations">Associations</a>
+    <a href="#chaplains">Chaplains</a>
+    <a href="#events">Events</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="copy">
+    &copy; <span id="yr"></span> St Rita's Chapel, Carona. Website by Godfrey Fernandes.
+  </div>
+</footer>
+
+<!-- ═══ GALLERY MODAL HTML ═══ -->
+<div id="galleryModal" class="gallery-modal">
+  <!-- Minimize/Close button positioned on top right of the enlarged view -->
+  <span class="gallery-close" onclick="closeGallery()"><i class="fa-solid fa-compress"></i></span>
+  <img class="gallery-modal-content" id="modalImg" alt="Expanded View">
+</div>
+
+<script>
+  // Set current year in footer
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Mobile Menu Logic
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // Close mobile menu on outside click
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    const ham = document.getElementById('ham');
+    if (menu && ham) {
+      if (!menu.contains(e.target) && !ham.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    }
+  });
+
+  /* ─────────────────────────────────────────────────────────────
+     GALLERY LOGIC (Integrated)
+  ───────────────────────────────────────────────────────────── */
+  
+  function openGallery(src) {
+    const modal = document.getElementById("galleryModal");
+    const modalImg = document.getElementById("modalImg");
+    if (modal && modalImg) {
+      modalImg.src = src;
+      modal.classList.add("show"); // Triggers the flex display in gallery.css
+      document.body.style.overflow = "hidden"; // Prevent scrolling the website
+    }
+  }
+
+  function closeGallery() {
+    const modal = document.getElementById("galleryModal");
+    if (modal) {
+      modal.classList.remove("show"); // Hides the modal
+      document.body.style.overflow = "auto"; // Re-enable website scrolling
+    }
+  }
+
+  // Close gallery if user clicks on the dark background area
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById("galleryModal");
+    if (e.target === modal) {
+      closeGallery();
+    }
+  });
+
+  // Support for Escape key to close the enlarged image
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape") {
+      closeGallery();
+    }
+  });
+</script>
+
+<!-- LINKED GALLERY JS -->
+<script src="assets/js/gallery.js"></script>
 </body>
-
 </html>
