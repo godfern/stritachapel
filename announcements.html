@@ -335,11 +335,22 @@
     footer p { font-size: 0.85rem; }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
+    /* @media (max-width: 600px) {
       .board-frame { padding: 1.5rem 1rem; }
       .notices-grid { grid-template-columns: 1fr; }
       .notice:nth-child(n) { transform: none; }
     }
+      /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .history-wrap { grid-template-columns: 1fr; }
+      .contact-wrap { flex-direction: column; }
+      .map-box { width: 100%; }
+      .tl-card { grid-template-columns: 48px 1fr; }
+      .tl-card img { width: 48px; height: 48px; }
+      section { padding: 3.5rem 1rem; }
+    } 
   </style>
 </head>
 <body>
@@ -444,19 +455,19 @@
       pin: 'pin-red',
       title: 'Feast of St Rita de Cascia — 22 May',
       body: 'Our most celebrated feast day! Join us for the special Novena, Solemn High Mass, and evening Procession. All parishioners and devotees are warmly welcome.',
-      date: '2025-05-22',
+      date: '2026-05-22',
       venue: 'St Rita\'s Chapel, Carona',
-      time: 'Mass at 10:00 AM',
+      time: 'Feast Mass Timings:  6:00 AM, 8:00 AM, 9:30 PM',
     },
     {
       id: 2,
       category: 'mass',
       pin: 'pin-blue',
       title: 'Sunday Mass Timings',
-      body: 'Kindly note our regular Sunday Mass schedule:\n• 8:00 AM — Konkani Mass\n• 10:00 AM — English Mass\nAll are welcome to attend.',
-      date: '2025-05-01',
+      body: 'Kindly note our regular Sunday Mass schedule:\n• 7:00 AM — Konkani Mass\n• 8:30 AM — Konkani Mass\nAll are welcome to attend.',
+      date: '2026-05-01',
       venue: 'St Rita\'s Chapel',
-      time: '8:00 AM & 10:00 AM',
+      time: '7:00 AM & 8:30 AM',
     },
     {
       id: 3,
@@ -472,7 +483,7 @@
       id: 4,
       category: 'event',
       pin: 'pin-green',
-      title: 'Tiatr — Char Dis Sonvsarantle',
+      title: 'Tiatr — Dita Toxem Ghetam',
       body: 'A wonderful Konkani Tiatr performance for the whole community. Tickets available at ₹100 per person. Don\'t miss this entertaining evening!',
       date: '',
       venue: 'Irmitichea Adrar',
@@ -486,24 +497,24 @@
       body: 'The Youth Group will hold its regular monthly meeting. All youth members are requested to attend. New members are most welcome to join!',
       date: '',
       venue: 'Chapel Hall',
-      time: '5:00 PM Saturday',
+      time: '7:00 PM Saturday',
     },
     {
       id: 6,
       category: 'announcement',
       pin: 'pin-blue',
       title: 'Catechism Classes Resume',
-      body: 'Sunday catechism classes will resume this week. Parents are requested to ensure their children attend regularly. Classes begin after the 8:00 AM Mass.',
+      body: 'Sunday catechism classes will resume this week. Parents are requested to ensure their children attend regularly. Classes begin after the 8:30 AM Mass.',
       date: '',
       venue: 'Catechism Room',
-      time: 'After 8:00 AM Mass',
+      time: 'After 8:30 AM Mass',
     },
     {
       id: 7,
       category: 'mass',
       pin: 'pin-gold',
       title: 'Confession — Saturday Evening',
-      body: 'Confessions will be heard every Saturday from 6:00 PM to 7:00 PM. Fr. Joaquim Fernandes will be available. You may also contact the chapel for an appointment.',
+      body: 'Confessions will be heard every Saturday from 6:00 PM to 7:00 PM. Fr. Caitain Fernandes will be available. You may also contact the chapel for an appointment.',
       date: '',
       venue: 'Chapel Confessional',
       time: '6:00 PM – 7:00 PM',
