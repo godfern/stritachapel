@@ -117,7 +117,7 @@
     .chapter h3 { font-size: 1.15rem; color: var(--brown-dark); margin-bottom: 0.5rem; }
     .chapter p { color: var(--text-mid); font-size: 0.95rem; }
     .chapter-img { grid-column: 1 / -1; margin-top: 1rem; border-radius: 8px; overflow: hidden; }
-    .chapter-img img { width: 100%; max-height: 400px; object-fit: cover; }
+    .chapter-img img { width: 100%; max-height: 400px; height: auto; object-fit: contain; object-position: center; display: block; }
 
     /* ── SAINT LIFE GALLERY ── */
     .saint-gallery-wrap {
@@ -265,7 +265,7 @@
     .event-meta i { color: var(--gold); }
 
     /* ── GALLERY ── */
-    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1rem; }
+    /* .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1rem; } */
     .gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; box-shadow: 0 4px 15px rgba(0,0,0,0.3); background: #000; }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
     .gallery-item:hover img { transform: scale(1.05); }
@@ -654,7 +654,7 @@
       </div>
       <!-- END saint-gallery-grid -->
     </div>
-    <!-- END saint-gallery-wrap -->
+    <!-- END saint- -wrap -->
 
   </div>
 </section>
@@ -794,17 +794,195 @@
     <div class="title-divider"></div>
     <div class="timeline">
 
+
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_tome.png" alt="Fr Tome" />
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Savio" />
           <div>
-            <div class="years">1921 – 1951</div>
-            <h3>Fr. Tome Damiao Cordeiro</h3>
-            <p>Our first Chaplain, renowned preacher and founder of the 'Santa Rita' Portuguese school. He lived among us for 31 years.</p>
+            <div class="years">2026 – Present</div>
+            <h3>Fr. Savio  <span style="font-size:0.75rem; background:var(--gold); color:var(--brown-dark); border-radius:20px; padding:2px 10px; font-family:'Lato',sans-serif; font-weight:700; vertical-align:middle;">Current</span></h3>
+            <p>Our sixteenth Chaplain </p>
           </div>
         </div>
       </div>
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="assets/images/priests/fr_caetano_resized.png" alt="Fr Caitan" />
+          <div>
+            <div class="years">2020 – 2026</div>
+            <h3>Fr. Caitan D'Souza </h3>
+            <p>Our fifteenth Chaplain, Fr. Caitan D'Souza continues to guide the parish with dedication, faith, and compassionate service, inspiring the community through prayer and unity.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Marino" />
+          <div>
+            <div class="years">2015 – 2020</div>
+            <h3>Fr. Marino Menezes</h3>
+            <p>Our fourteenth Chaplain </p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Joaquim" />
+          <div>
+            <div class="years">2010 – 2015</div>
+            <h3>Fr. Joaquim Fernandes </h3>
+            <p>Our thirteenth Chaplain, blessed to lead the chapel's 150th anniversary. He has built a beautiful garden, a children's park, and works tirelessly to grow God's love in Carona.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_vanacio.png" alt="Fr Venancio" />
+          <div>
+            <div class="years">2008 – 2010</div>
+            <h3>Fr. Venancio Fonseca</h3>
+            <p>Our twelfth Chaplain — a man of few words but great learning. He holds a Ph.D. and served with quiet dedication.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_oliver.png" alt="Fr Antonio" />
+          <div>
+            <div class="years">2007 – 2008</div>
+            <h3>Fr. Antonio Oliveira</h3>
+            <p>Our eleventh Chaplain — fondly called 'AOB' (Antonio Oliveira Boro). He shared his missionary experiences with the youth.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_mathew.png" alt="Fr Mateus" />
+          <div>
+            <div class="years">2002 – 2007</div>
+            <h3>Fr. Mateus Rodrigues</h3>
+            <p>Our tenth Chaplain — a wonderful singer and musician who gifted us the new St Rita song. He introduced the daily Blessed Sacrament adoration.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_jaime.png" alt="Fr Jaime" />
+          <div>
+            <div class="years">1996 – 2002</div>
+            <h3>Fr. Jaime Couto</h3>
+            <p>Our ninth Chaplain, known for his excellent school work and pastoral care. He created 'Family Cards' bringing every family together.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_zeferino.png" alt="Fr Zeferino" />
+          <div>
+            <div class="years">1991 – 1996</div>
+            <h3>Fr. Zeferino D'Souza</h3>
+            <p>Our eighth Chaplain, who advanced the work of Jesus' recognition. Under his leadership the chapel residence was constructed.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_carlos.png" alt="Fr Carlos" />
+          <div>
+            <div class="years">1984 – 1991</div>
+            <h3>Fr. Carlos Mendes</h3>
+            <p>Our seventh Chaplain — an excellent singer and musician. He oversaw the chapel's 125th anniversary and the development of the St Rita Shopping Complex.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_angnelo.png" alt="Fr Agnelo" />
+          <div>
+            <div class="years">1977 – 1983</div>
+            <h3>Fr. Agnelo Mendes</h3>
+            <p>Our sixth Chaplain, who worked diligently for the chapel and the wards.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Wilson" />
+          <div>
+            <div class="years">1974 – 1977</div>
+            <h3>Fr. Wilson Almeida</h3>
+            <p>Our fifth Chaplain.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_nicolau.png" alt="Fr Nicolau" />
+          <div>
+            <div class="years">1954 – 1974</div>
+            <h3>Fr. Nicolau Xavier Mendes</h3>
+            <p>Our fourth Chaplain, who served 20 years. He celebrated the chapel's centenary in 1964 and oversaw the construction of the new shrine.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Roberto" />
+          <div>
+            <div class="years">1953 – 1954</div>
+            <h3>Fr. Roberto Barreto</h3>
+            <p>Our third Chaplain, who served for four months.</p>
+          </div>
+        </div>
+      </div>
+
 
       <div class="tl-item">
         <div class="tl-dot"></div>
@@ -821,142 +999,11 @@
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Roberto" />
+          <img src="https://stritachapelcarona.in/assets/images/priests/fr_tome.png" alt="Fr Tome" />
           <div>
-            <div class="years">1953 – 1954</div>
-            <h3>Fr. Roberto Barreto</h3>
-            <p>Our third Chaplain, who served for four months.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_nicolau.png" alt="Fr Nicolau" />
-          <div>
-            <div class="years">1954 – 1974</div>
-            <h3>Fr. Nicolau Xavier Mendes</h3>
-            <p>Our fourth Chaplain, who served 20 years. He celebrated the chapel's centenary in 1964 and oversaw the construction of the new shrine.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Wilson" />
-          <div>
-            <div class="years">1974 – 1977</div>
-            <h3>Fr. Wilson Almeida</h3>
-            <p>Our fifth Chaplain.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_angnelo.png" alt="Fr Agnelo" />
-          <div>
-            <div class="years">1977 – 1983</div>
-            <h3>Fr. Agnelo Mendes</h3>
-            <p>Our sixth Chaplain, who worked diligently for the chapel and the wards.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_carlos.png" alt="Fr Carlos" />
-          <div>
-            <div class="years">1984 – 1991</div>
-            <h3>Fr. Carlos Mendes</h3>
-            <p>Our seventh Chaplain — an excellent singer and musician. He oversaw the chapel's 125th anniversary and the development of the St Rita Shopping Complex.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_zeferino.png" alt="Fr Zeferino" />
-          <div>
-            <div class="years">1991 – 1996</div>
-            <h3>Fr. Zeferino D'Souza</h3>
-            <p>Our eighth Chaplain, who advanced the work of Jesus' recognition. Under his leadership the chapel residence was constructed.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_jaime.png" alt="Fr Jaime" />
-          <div>
-            <div class="years">1996 – 2002</div>
-            <h3>Fr. Jaime Couto</h3>
-            <p>Our ninth Chaplain, known for his excellent school work and pastoral care. He created 'Family Cards' bringing every family together.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_mathew.png" alt="Fr Mateus" />
-          <div>
-            <div class="years">2002 – 2007</div>
-            <h3>Fr. Mateus Rodrigues</h3>
-            <p>Our tenth Chaplain — a wonderful singer and musician who gifted us the new St Rita song. He introduced the daily Blessed Sacrament adoration.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_oliver.png" alt="Fr Antonio" />
-          <div>
-            <div class="years">2007 – 2008</div>
-            <h3>Fr. Antonio Oliveira</h3>
-            <p>Our eleventh Chaplain — fondly called 'AOB' (Antonio Oliveira Boro). He shared his missionary experiences with the youth.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_vanacio.png" alt="Fr Venancio" />
-          <div>
-            <div class="years">2008 – 2010</div>
-            <h3>Fr. Venancio Fonseca</h3>
-            <p>Our twelfth Chaplain — a man of few words but great learning. He holds a Ph.D. and served with quiet dedication.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/priest-icon.png" alt="Fr Joaquim" />
-          <div>
-            <h3>Fr. Joaquim Fernandes <span style="font-size:0.75rem; background:var(--gold); color:var(--brown-dark); border-radius:20px; padding:2px 10px; font-family:'Lato',sans-serif; font-weight:700; vertical-align:middle;">Current</span></h3>
-            <p>Our thirteenth Chaplain, blessed to lead the chapel's 150th anniversary. He has built a beautiful garden, a children's park, and works tirelessly to grow God's love in Carona.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <img src="https://stritachapelcarona.in/assets/images/priests/fr_caitann.png" alt="Fr Caitan" />
-          <div>
-            <div class="years">2010 – Present</div>
-            <h3>Fr. Caitan D'Souza <span style="font-size:0.75rem; background:var(--gold); color:var(--brown-dark); border-radius:20px; padding:2px 10px; font-family:'Lato',sans-serif; font-weight:700; vertical-align:middle;">Current</span></h3>
-            <p>Our fourteenth Chaplain, Fr. Caitan D'Souza continues to guide the parish with dedication, faith, and compassionate service, inspiring the community through prayer and unity.</p>
+            <div class="years">1921 – 1951</div>
+            <h3>Fr. Tome Damiao Cordeiro</h3>
+            <p>Our first Chaplain, renowned preacher and founder of the 'Santa Rita' Portuguese school. He lived among us for 31 years.</p>
           </div>
         </div>
       </div>
@@ -968,7 +1015,7 @@
 <!-- ═══ EVENTS ═══ -->
 <section id="events">
   <div class="section-inner">
-    <span class="section-label">What's On</span>
+    <!-- <span class="section-label">What's On</span>
     <h2 class="section-title">Upcoming <span>Events</span></h2>
     <div class="title-divider"></div>
     <div class="events-grid">
@@ -1005,7 +1052,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
     <div style="text-align:center; margin-top:2rem;">
       <a href="announcements.html" class="btn btn-gold">See All Announcements &amp; Events</a>
     </div>
@@ -1025,21 +1072,63 @@
       </button>
       <div class="gallery-slider-wrapper">
         <div class="gallery-grid" id="galleryTrack">
+
           <div class="gallery-item">
-            <img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 1">
+            <img src="assets\images\gallery\IMG_5779.png" alt="Gallery 1">
             <button class="enlarge-btn" onclick="openGallery(0)"><i class="fa-solid fa-expand"></i></button>
           </div>
+
           <div class="gallery-item">
-            <img src="https://stritachapelcarona.in/assets/images/gallery/2.png" alt="Gallery 2">
+            <img src="assets\images\gallery\IMG_5871.png" alt="Gallery 2">
             <button class="enlarge-btn" onclick="openGallery(1)"><i class="fa-solid fa-expand"></i></button>
           </div>
+
+
           <div class="gallery-item">
-            <img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 3">
+            <img src="assets\images\gallery\IMG_5839.png" alt="Gallery 3">
             <button class="enlarge-btn" onclick="openGallery(2)"><i class="fa-solid fa-expand"></i></button>
           </div>
+
           <div class="gallery-item">
-            <img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 4">
+            <img src="assets\images\gallery\IMG_5841.png" alt="Gallery 4">
             <button class="enlarge-btn" onclick="openGallery(3)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets\images\gallery\IMG_5776.png" alt="Gallery 5">
+            <button class="enlarge-btn" onclick="openGallery(4)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets\images\gallery\IMG_5431.png" alt="Gallery 6">
+            <button class="enlarge-btn" onclick="openGallery(5)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets\images\gallery\IMG_5694.png" alt="Gallery 7">
+            <button class="enlarge-btn" onclick="openGallery(6)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets\images\gallery\IMG_5387.png" alt="Gallery 8">
+            <button class="enlarge-btn" onclick="openGallery(7)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/1.png" alt="Gallery 9">
+            <button class="enlarge-btn" onclick="openGallery(8)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/2.png" alt="Gallery 10">
+            <button class="enlarge-btn" onclick="openGallery(9)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/3.png" alt="Gallery 11">
+            <button class="enlarge-btn" onclick="openGallery(10)"><i class="fa-solid fa-expand"></i></button>
+          </div>
+          <div class="gallery-item">
+            <img src="https://stritachapelcarona.in/assets/images/gallery/4.png" alt="Gallery 12">
+            <button class="enlarge-btn" onclick="openGallery(11)"><i class="fa-solid fa-expand"></i></button>
           </div>
         </div>
       </div>
