@@ -28,32 +28,29 @@ function initSlider() {
 
 function moveSlider(direction) {
     const track = document.getElementById('galleryTrack');
-    const item = document.querySelector('.gallery-item');
-    if (!item) return;
 
-    // Calculate width of one item + the gap (1.5rem = 24px approx)
-    const itemWidth = item.offsetWidth + 24; 
-    
     sliderPosition += direction;
-    
-    // Logic: Prevent sliding past the limits
-    const maxSlides = allGalleryImages.length - 4;
+
+    const totalPages = Math.ceil(allGalleryImages.length / 4);
+    const maxSlides = totalPages - 1;
+
     if (sliderPosition < 0) sliderPosition = 0;
     if (sliderPosition > maxSlides) sliderPosition = maxSlides;
 
-    // Move the track
-    track.style.transform = `translateX(-${sliderPosition * itemWidth}px)`;
+    track.style.transform = `translateX(-${sliderPosition * 100}%)`;
+
     updateSliderButtons();
 }
 
 function updateSliderButtons() {
     const nextBtn = document.getElementById('sliderNext');
     const prevBtn = document.getElementById('sliderPrev');
-    const maxSlides = allGalleryImages.length - 4;
 
-    // Show/Hide slider arrows based on position
-    prevBtn.style.display = (sliderPosition === 0) ? "none" : "flex";
-    nextBtn.style.display = (sliderPosition >= maxSlides) ? "none" : "flex";
+    const totalPages = Math.ceil(allGalleryImages.length / 4);
+    const maxSlides = totalPages - 1;
+
+    prevBtn.style.display = sliderPosition === 0 ? "none" : "flex";
+    nextBtn.style.display = sliderPosition >= maxSlides ? "none" : "flex";
 }
 
 /* ── MODAL LOGIC (FOR ENLARGED VIEW) ── */
